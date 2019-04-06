@@ -1,7 +1,6 @@
 ---
 title: "Three years of problems with an iMac G5"
 layout: posts
-authors: Mohammed Alhamid
 ---
 
 # Welcome 
