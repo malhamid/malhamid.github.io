@@ -110,6 +110,8 @@ author:
   avatar           : "/assets/images/alhamid-profile.jpg"
   bio              : "PhD, Machine Learning and AI"
   email            :
+  links: 
+
 
 # Site Footer
 footer:
@@ -247,7 +249,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "/_posts/"
       type: posts
     values:
       layout: single
