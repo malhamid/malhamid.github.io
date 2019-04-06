@@ -1,7 +1,18 @@
 ---
 title: "Three years of problems with an iMac G5"
+header: 
+  teaser: /assets/images/ai-icon.jpg
 layout: posts
+date: 2019-04-01
+tags:
+    - Apple
+    - Photography
+    - MacIT
+    - California
 ---
+
+<img src="/assets/images/ai-icon.jpg" alt="">
+Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click > Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. 
 
 # Welcome 
 
