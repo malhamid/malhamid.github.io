@@ -112,27 +112,24 @@ author:
   email            :
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
-       url: mailto:moh.alhamid@gmail.com
+      #icon: "fas fa-fw fa-envelope-square"
+      # url: mailto:your.name@email.com
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/malhamid"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-       url: "https://github.com/malhamid"
 
 # Site Footer
 footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/malhamid"
+      url: "malhamid"
     #- label: "Facebook"
     #  icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/malhamid"
+      url: "malhamid"
     #- label: "GitLab"
     #  icon: "fab fa-fw fa-gitlab"
       # url:
