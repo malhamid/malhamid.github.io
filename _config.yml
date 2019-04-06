@@ -109,11 +109,11 @@ author:
   name             : "Mohammed Alhamid"
   avatar           : "images/alhamid-profile.jpg"
   bio              : "PhD, Machine Learning and AI"
-  location         : ""
+  #location         : ""
   email            :
   links:
     - label: "Email"
-      icon: "fas fa-fw fa-envelope-square"
+      #icon: "fas fa-fw fa-envelope-square"
       # url: mailto:your.name@email.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
