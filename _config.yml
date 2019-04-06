@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Mohammed Alhamid"
+title                    : "AI and Machine Learning Blog"
 title_separator          : "-"
 name                     : "Mohammed Alhamid"
 description              : "All about AI and Machine Learning.."
