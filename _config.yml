@@ -107,7 +107,7 @@ analytics:
 # Site Author
 author:
   name             : "Mohammed Alhamid"
-  avatar           : "/images/alhamid-profile.jpg"
+  avatar           : "images/alhamid-profile.jpg"
   bio              : "PhD, Machine Learning and AI"
   location         : ""
   email            :
