@@ -1,14 +1,14 @@
 ---
-title: "Three years of problems with an iMac G5"
+title: "Features Engineering in ML"
 header: 
   teaser: /assets/images/ai-icon.jpg
 layout: posts
 date: 2019-04-01
 tags:
-    - Apple
-    - Photography
-    - MacIT
-    - California
+    - Machine Learning
+    - ML
+    - Feature Engineering
+    - AI
 ---
 
 <img src="/assets/images/ai-icon.jpg" alt="">
