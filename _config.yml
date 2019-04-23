@@ -136,6 +136,8 @@ footer:
 include:
   - .htaccess
   - _pages
+  - _ar_home
+  - _ar_posts
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -260,3 +262,4 @@ defaults:
       comments: # true
       share: true
       related: true
+      
