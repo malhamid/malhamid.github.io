@@ -32,12 +32,12 @@ var store = [{
         "title": "السياق .. مستقبل التقنية",
         "excerpt":"السياق لغة الموقف الذي يشار للدلالة عليه مجموعة من العلاقات الزمنية والمكانية المتصلة وهو أيضاً يعني سياق الكلام الذي يصف حالة ما. وفي لغة التقنية، السياق يعني الظروف المحيطة بالفكرة أو الحادثة. ربما طرح مثال يوضح المعنى أكثر ولماذا قد يكون السياق أحد مفاتيح المستقبل. لتتخيل أيها القارئ الكريم أن...","categories": ["ar_posts"],
         "tags": ["التقنية","السياق"],
-        "url": "http://localhost:4000/ar_posts/ar_context-Copy/",
-        "teaser":null},{
-        "title": "السياق .. مستقبل التقنية",
-        "excerpt":"السياق لغة الموقف الذي يشار للدلالة عليه مجموعة من العلاقات الزمنية والمكانية المتصلة وهو أيضاً يعني سياق الكلام الذي يصف حالة ما. وفي لغة التقنية، السياق يعني الظروف المحيطة بالفكرة أو الحادثة. ربما طرح مثال يوضح المعنى أكثر ولماذا قد يكون السياق أحد مفاتيح المستقبل. لتتخيل أيها القارئ الكريم أن...","categories": ["ar_posts"],
-        "tags": ["التقنية","السياق"],
         "url": "http://localhost:4000/ar_posts/ar_context/",
+        "teaser":null},{
+        "title": "مستقبل الإنترنت",
+        "excerpt":"قد يتساءل أحد منا عما سيفضي ويتطور إليه عالم الإنترنت في المستقبل وماذا سيؤثر ذلك على حياتنا. تعود بدايات فكرة الإنترنت إلى ملاحظات وأفكار كتبها تيم بيرنارز لي على ورقة ملاحظات في العام 1962 م. ومنذ تلك اللحظة تسارع تطور صفحات وشبكات الإنترنت بشكل لم يكن من المتوقع وزادت تبعاً...","categories": ["ar_posts"],
+        "tags": ["التقنية","مستقبل الإنترنت"],
+        "url": "http://localhost:4000/ar_posts/ar_context-Copy/",
         "teaser":null},{
         "title": "Features Engineering in ML",
         "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
