@@ -39,10 +39,25 @@ var store = [{
         "tags": ["الذكاء-الاصطناعي","مستقبل-التقنية"],
         "url": "http://localhost:4000/ar_posts/ar_whatsmissing/",
         "teaser":null},{
+        "title": "تسارع شبكات التواصل الاجتماعية",
+        "excerpt":"نشر في جريدة الرياض الثلاثاء 22 ذي الحجة 1436 هـ - 6 اكتوبر 2015 م - العدد 17270, صفحة رقم ( 26 ) ذكر ابن خلدون في مقدمته أن الاجتماع الإنساني ضروري، وأنه مدني بطبعه، واجتماعهم من ضروريات فطرته، وهذا المنطق يتناسق بانتظام في تفسير انتشار شبكات التواصل الاجتماعي اليوم...","categories": ["ar_posts"],
+        "tags": ["الشبكات-الاجتماعية","التواصل-الاجتماعي"],
+        "url": "http://localhost:4000/ar_posts/ar_socialmedia/",
+        "teaser":null},{
         "title": "اقتصاد الشبكات الاجتماعية",
         "excerpt":"نشر في جريدة الرياض الاثنين 28 ذي الحجة 1436 هـ – 12 اكتوبر 2015 م – العدد 17276, صفحة رقم ( 26 ) ذكرت في مقالي السابق المنشور بتاريخ 22 ذي الحجة 1436 ه ، مدى تسارع انتشار شبكات التواصل الاجتماعي في فضاء الإنترنت والقيمة الاقتصادية التي حققتها تلك الشبكات...","categories": ["ar_posts"],
         "tags": ["الشبكات-الاجتماعية","اقتصاد-الشبكات-الاجتماعية"],
         "url": "http://localhost:4000/ar_posts/ar_socialeco/",
+        "teaser":null},{
+        "title": "بوصلة المدن الذكية",
+        "excerpt":"نشر في جريدة الرياض ، العدد ١٧٢٩٣ الخميس ١٦ محرم ١٤٣٧ ه الموافق ٢٩ أكتوبر ٢٠١٥ م. تتعدد وجهات النظر حول مفهوم المدن الذكية وتختلف صورها في أذهاننا، ليس فقط بين العامة منا بل أيضاً بين المختصين. من المؤكد أن المدن الذكية تقوم على قائمة من الأمنيات التي يراد تحقيقها...","categories": ["ar_posts"],
+        "tags": ["المدن-الذكية","مستقبل-المدن"],
+        "url": "http://localhost:4000/ar_posts/ar_smartCities/",
+        "teaser":null},{
+        "title": "التقنية ومطارات المستقبل",
+        "excerpt":"نشر في جريدة الرياض السبت 2 صفر 1437 هـ - 14 نوفمبر 2015م - العدد 17309 , صفحة رقم ( 22) المطارات بوابات الدول ومنها يعبر أغلب البشر في انتقالهم وتعد وسيلة مهمة ليست فقط في تسهيل إجراءات عبور المسافرين بل أيضاً وسيلة للدلالة على المستوى الخدمي والاقتصادي ومرآة تعكس...","categories": ["ar_posts"],
+        "tags": ["المدن-الذكية","مستقبل-المدن"],
+        "url": "http://localhost:4000/ar_posts/ar_airportstech/",
         "teaser":null},{
         "title": "Features Engineering in ML",
         "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
