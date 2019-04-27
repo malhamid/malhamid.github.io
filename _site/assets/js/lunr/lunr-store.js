@@ -54,10 +54,15 @@ var store = [{
         "tags": ["المدن-الذكية","مستقبل-المدن"],
         "url": "http://localhost:4000/ar_posts/ar_smartCities/",
         "teaser":null},{
-        "title": "التقنية ومطارات المستقبل",
+        "title": "التقنية و مطارات المستقبل",
         "excerpt":"نشر في جريدة الرياض السبت 2 صفر 1437 هـ - 14 نوفمبر 2015م - العدد 17309 , صفحة رقم ( 22) المطارات بوابات الدول ومنها يعبر أغلب البشر في انتقالهم وتعد وسيلة مهمة ليست فقط في تسهيل إجراءات عبور المسافرين بل أيضاً وسيلة للدلالة على المستوى الخدمي والاقتصادي ومرآة تعكس...","categories": ["ar_posts"],
-        "tags": ["المدن-الذكية","مستقبل-المدن"],
+        "tags": ["الطائرات","مستقبل-المطارات","تقنيات-المطارات"],
         "url": "http://localhost:4000/ar_posts/ar_airportstech/",
+        "teaser":null},{
+        "title": "التقنية داخل الطائرة",
+        "excerpt":"نشر في جريدة الرياض - الاثنين 25 صفر 1437 هـ - 07 ديسمبر 2015م - العدد 17332 , صفحة رقم ( 30 ) ذكرت في مقالي السابق المنشور بتاريخ 2 صفر 1437 ه، تصورات بشأن الدور الذي تستطيع التقنية أن تلعبه لتطوير مطارات العالم في المستقبل القريب والقيمة الاقتصادية العائدة...","categories": ["ar_posts"],
+        "tags": ["المدن-الذكية","مستقبل-المدن"],
+        "url": "http://localhost:4000/ar_posts/ar_airplanes/",
         "teaser":null},{
         "title": "Features Engineering in ML",
         "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
