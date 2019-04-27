@@ -34,10 +34,15 @@ var store = [{
         "tags": ["التقنية","السياق"],
         "url": "http://localhost:4000/ar_posts/ar_context/",
         "teaser":null},{
-        "title": "مستقبل الإنترنت",
-        "excerpt":"قد يتساءل أحد منا عما سيفضي ويتطور إليه عالم الإنترنت في المستقبل وماذا سيؤثر ذلك على حياتنا. تعود بدايات فكرة الإنترنت إلى ملاحظات وأفكار كتبها تيم بيرنارز لي على ورقة ملاحظات في العام 1962 م. ومنذ تلك اللحظة تسارع تطور صفحات وشبكات الإنترنت بشكل لم يكن من المتوقع وزادت تبعاً...","categories": ["ar_posts"],
-        "tags": ["التقنية","مستقبل الإنترنت"],
-        "url": "http://localhost:4000/ar_posts/ar_context-Copy/",
+        "title": "ماذا ينقصنا اليوم تقنياً؟",
+        "excerpt":"نشر في جريدة الرياض . الأربعاء 2 ذي الحجة 1436 هـ - 16 سبتمبر 2015م - العدد 17250, صفحة رقم ( 34 ) تتسارع الأدوات والحلول التقنية اليوم في اتجاهات مختلفة، منها ما يخدم في زيادة الرفاهية لمعيشتنا والآخر ما يساهم في زيادة مستوى التواصل الاجتماعي أو الإنتاج الصناعي. ولذلك...","categories": ["ar_posts"],
+        "tags": ["الذكاء-الاصطناعي","مستقبل-التقنية"],
+        "url": "http://localhost:4000/ar_posts/ar_whatsmissing/",
+        "teaser":null},{
+        "title": "اقتصاد الشبكات الاجتماعية",
+        "excerpt":"نشر في جريدة الرياض الاثنين 28 ذي الحجة 1436 هـ – 12 اكتوبر 2015 م – العدد 17276, صفحة رقم ( 26 ) ذكرت في مقالي السابق المنشور بتاريخ 22 ذي الحجة 1436 ه ، مدى تسارع انتشار شبكات التواصل الاجتماعي في فضاء الإنترنت والقيمة الاقتصادية التي حققتها تلك الشبكات...","categories": ["ar_posts"],
+        "tags": ["الشبكات-الاجتماعية","اقتصاد-الشبكات-الاجتماعية"],
+        "url": "http://localhost:4000/ar_posts/ar_socialeco/",
         "teaser":null},{
         "title": "Features Engineering in ML",
         "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
