@@ -64,6 +64,26 @@ var store = [{
         "tags": ["المدن-الذكية","مستقبل-المدن"],
         "url": "http://localhost:4000/ar_posts/ar_airplanes/",
         "teaser":null},{
+        "title": "التحول لاقتصاد المعرفة",
+        "excerpt":"السبت 6 ربيع الأخر 1437 هـ - 16 يناير 2016م - العدد 17372, صفحة رقم ( 35 ) يشهد عهد خادم الحرمين الملك سلمان بن عبدالعزيز -حفظه الله- عزماً قوياً على المضي في تنوع مصادر الدخل والاستثمار في بناء اقتصاد المعرفة لخلق المزيد من فرص العمل والاستمرار في دعم الازدهار...","categories": ["ar_posts"],
+        "tags": ["اقتصاد-المعرفة","التحول-الرقمي"],
+        "url": "http://localhost:4000/ar_posts/ar_ecoknow/",
+        "teaser":null},{
+        "title": "الأوراق المالية الإلكترونية",
+        "excerpt":"الأربعاء 1 جمادى الأولى 1437 هـ - 10 فبراير 2016م - العدد 17397 , صفحة رقم ( 22 ) يعتمد البشر على الأوراق النقدية في معاملاتهم التجارية، فقد كان الصينيون أول من ابتكر التعامل بالورق النقدي بين عامي 618 و900 للميلاد. وفي القرن السابع عشر، بدأ الأوروبيون بتبادل الأوراق النقدية...","categories": ["ar_posts"],
+        "tags": ["الأوراق-المالية","العملة-الرقمية"],
+        "url": "http://localhost:4000/ar_posts/ar_emoney/",
+        "teaser":null},{
+        "title": "رؤية المملكة والاستثمار في البيانات",
+        "excerpt":"السبت 13 رمضان 1437 هـ- 18 يونيو 2016م - العدد 1512314 سهلت التقنية التي نمتلكها اليوم في جمع ثروة كبيرة من البيانات التي تتفاقم قيمتها وأهميتها يوماً بعد يوم. الكثير من الأشياء التي طرأت مؤخراً في مجال البرمجيات ووسائل التواصل الاجتماعي غيرت الكثير من المفاهيم الهندسية للأنظمة وطرق التعامل مع...","categories": ["ar_posts"],
+        "tags": ["رؤية-المملكة","الاستثمار-في-البيانات"],
+        "url": "http://localhost:4000/ar_posts/ar_techvision/",
+        "teaser":null},{
+        "title": "القوة الدافعة للاستثمار في المعلوماتية",
+        "excerpt":"نشر في جريدة الرياض - الاثنين 25 صفر 1438 هـ - 21 ديسمبر 2016م - العدد 1550169 , صفحة رقم ( 30 ) العالم اليوم يتسارع في التغير اقتصادياً. العديد من الدول النامية غدت تنصرف عن الاعتماد على الثروات الطبيعية متجهة إلى الصناعات المتخصصة معتمدة في ذلك على الخبرات المحلية...","categories": ["ar_posts"],
+        "tags": ["الاستثمار-في-المعلوماتية","الاستثمار-في-البيانات"],
+        "url": "http://localhost:4000/ar_posts/ar_techinvest/",
+        "teaser":null},{
         "title": "Features Engineering in ML",
         "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
         "tags": ["Machine Learning","ML","Feature Engineering","AI"],
