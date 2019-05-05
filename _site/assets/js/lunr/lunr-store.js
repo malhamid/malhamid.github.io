@@ -34,6 +34,11 @@ var store = [{
         "tags": ["التقنية","السياق"],
         "url": "http://localhost:4000/ar_posts/ar_context/",
         "teaser":null},{
+        "title": "مستقبل الإنترنت",
+        "excerpt":"الاثنين 16 ذي القعدة 1436 هـ - 31 اغسطس 2015م - العدد 17234, صفحة رقم ( 26 ) قد يتساءل أحد منا عما سيفضي ويتطور إليه عالم الإنترنت في المستقبل وماذا سيؤثر ذلك على حياتنا. تعود بدايات فكرة الإنترنت إلى ملاحظات وأفكار كتبها تيم بيرنارز لي على ورقة ملاحظات في...","categories": ["ar_posts"],
+        "tags": ["مستقبل-الانترنت","عالم-الانترنت"],
+        "url": "http://localhost:4000/ar_posts/internetfuture/",
+        "teaser":null},{
         "title": "ماذا ينقصنا اليوم تقنياً؟",
         "excerpt":"نشر في جريدة الرياض . الأربعاء 2 ذي الحجة 1436 هـ - 16 سبتمبر 2015م - العدد 17250, صفحة رقم ( 34 ) تتسارع الأدوات والحلول التقنية اليوم في اتجاهات مختلفة، منها ما يخدم في زيادة الرفاهية لمعيشتنا والآخر ما يساهم في زيادة مستوى التواصل الاجتماعي أو الإنتاج الصناعي. ولذلك...","categories": ["ar_posts"],
         "tags": ["الذكاء-الاصطناعي","مستقبل-التقنية"],
@@ -84,6 +89,11 @@ var store = [{
         "tags": ["الاستثمار-في-المعلوماتية","الاستثمار-في-البيانات"],
         "url": "http://localhost:4000/ar_posts/ar_techinvest/",
         "teaser":null},{
+        "title": "Features Engineering in ML",
+        "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
+        "tags": ["Machine Learning","ML","Feature Engineering","AI"],
+        "url": "http://localhost:4000/feature_engineering-Copy/",
+        "teaser":"http://localhost:4000/assets/images/ai-icon.jpg"},{
         "title": "Features Engineering in ML",
         "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
         "tags": ["Machine Learning","ML","Feature Engineering","AI"],
