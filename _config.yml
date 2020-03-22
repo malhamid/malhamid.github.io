@@ -118,18 +118,14 @@ author:
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "malhamid"
+    # - label: "Twitter"
+    #   icon: "fab fa-fw fa-twitter-square"
+    #   url: "https://github.com/malhamid"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/malhamid"
-    #- label: "GitLab"
-    #  icon: "fab fa-fw fa-gitlab"
-      # url:
-    #- label: "Bitbucket"
-    #  icon: "fab fa-fw fa-bitbucket"
-      # url:
+    
+    
 
 
 # Reading Files
