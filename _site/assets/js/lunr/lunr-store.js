@@ -98,4 +98,9 @@ var store = [{
         "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
         "tags": ["Machine Learning","ML","Feature Engineering","AI"],
         "url": "http://localhost:4000/feature_engineering/",
-        "teaser":"http://localhost:4000/assets/images/ai-icon.jpg"}]
+        "teaser":"http://localhost:4000/assets/images/ai-icon.jpg"},{
+        "title": "الكتب، الدورات، وقواعد البيانات التي يجب على كل عالم بيانات معرفتها",
+        "excerpt":"نشر في موقع نمذجيات - ٧ ديسمبر 2019م بادئ ذي بدء، أنت على الطريق الصحيح. يعد العمل على تعلم الآلة (Machine Learning) من أجل بناء معرفتك في مجال الذكاء الاصطناعي خياراً مميزاً. تحرز تقنيات الذكاء الاصطناعي تقدماً هائلاً ليس فقط في تطوير البرمجيات بل كل جانب من جوانب حياتنا اليومية....","categories": ["ar_posts"],
+        "tags": ["كتب-في-تعلم-الآلة","مراجع-في-تعلم-الآلة"],
+        "url": "http://localhost:4000/ar_posts/ar_ml_resources/",
+        "teaser":"https://i0.wp.com/miro.medium.com/max/1514/1*kzdg0w1TOhqAoxpLoWFVNA.png?zoom=2&resize=708%2C396&ssl=1"}]
