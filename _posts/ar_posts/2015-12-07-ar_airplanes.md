@@ -1,5 +1,7 @@
 ---
 title: "التقنية داخل الطائرة"
+header: 
+  teaser: /assets/images/102-icon.jpg
 layout: ar_posts
 date: 2015-12-07
 tags:
@@ -7,6 +9,9 @@ tags:
     - مستقبل-المدن
 categories: ar_posts
 ---
+<figure class="image">
+    <a href="/assets/images//assets/images/102-icon.jpg"><img src="/assets/images/102-icon.jpg"></a>
+    <figcaption>Photo by Nathan Hobbs on Unsplash</figcaption>
 
 نشر في جريدة الرياض - الاثنين 25 صفر 1437 هـ - 07 ديسمبر 2015م - العدد 17332 , صفحة رقم ( 30 )
 

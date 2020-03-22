@@ -1,6 +1,7 @@
 ---
 title: "مستقبل الإنترنت"
-
+header: 
+  teaser: /assets/images/108-icon.jpg
 layout: ar_posts
 date: 2015-08-31
 tags:
@@ -8,6 +9,9 @@ tags:
     - عالم-الانترنت
 categories: ar_posts
 ---
+<figure class="image">
+    <a href="/assets/images//assets/images/108-icon.jpg"><img src="/assets/images/108-icon.jpg"></a>
+    <figcaption>Photo by Nathan Hobbs on Unsplash</figcaption>
 
 الاثنين 16 ذي القعدة 1436 هـ - 31 اغسطس 2015م - العدد 17234, صفحة رقم ( 26 )
 

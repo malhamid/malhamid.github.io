@@ -1,5 +1,7 @@
 ---
 title: "بوصلة المدن الذكية"
+header: 
+  teaser: /assets/images/104-icon.jpg
 layout: ar_posts
 date: 2015-10-29
 tags:
@@ -7,6 +9,9 @@ tags:
     - مستقبل-المدن
 categories: ar_posts
 ---
+<figure class="image">
+    <a href="/assets/images//assets/images/104-icon.jpg"><img src="/assets/images/104-icon.jpg"></a>
+    <figcaption>Photo by Nathan Hobbs on Unsplash</figcaption>
 
 نشر في جريدة الرياض ، العدد ١٧٢٩٣ الخميس ١٦ محرم ١٤٣٧ ه الموافق ٢٩ أكتوبر ٢٠١٥ م.
 

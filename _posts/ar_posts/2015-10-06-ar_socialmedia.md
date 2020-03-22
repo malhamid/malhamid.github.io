@@ -1,5 +1,7 @@
 ---
 title: "تسارع شبكات التواصل الاجتماعية"
+header: 
+  teaser: /assets/images/106-icon.jpg
 layout: ar_posts
 date: 2015-10-06
 tags:
@@ -7,7 +9,9 @@ tags:
     - التواصل-الاجتماعي
 categories: ar_posts
 ---
-
+<figure class="image">
+    <a href="/assets/images//assets/images/106-icon.jpg"><img src="/assets/images/106-icon.jpg"></a>
+    <figcaption>Photo by Austin Distel on Unsplash</figcaption>
 
 نشر في جريدة الرياض الثلاثاء 22 ذي الحجة 1436 هـ - 6 اكتوبر 2015 م - العدد 17270, صفحة رقم ( 26 )
 

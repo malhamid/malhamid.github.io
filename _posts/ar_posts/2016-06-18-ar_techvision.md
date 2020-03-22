@@ -1,5 +1,7 @@
 ---
 title: "رؤية المملكة والاستثمار في البيانات"
+header: 
+  teaser: /assets/images/invest-tech-icon.jpg
 layout: ar_posts
 date: 2016-06-18
 tags:
@@ -7,6 +9,12 @@ tags:
     - الاستثمار-في-البيانات
 categories: ar_posts
 ---
+<figure class="image">
+    <a href="/assets/images//assets/images/invest-tech-icon.jpg"><img src="/assets/images/invest-tech-icon.jpg"></a>
+    <figcaption>Photo by NASA on Unsplash</figcaption>
+</figure>
+
+
 
  السبت 13 رمضان 1437 هـ- 18 يونيو 2016م - العدد 1512314
 

@@ -1,5 +1,7 @@
 ---
 title: "التحول لاقتصاد المعرفة"
+header: 
+  teaser: /assets/images/101-icon.jpg
 layout: ar_posts
 date: 2016-01-16
 tags:
@@ -7,6 +9,10 @@ tags:
     - التحول-الرقمي
 categories: ar_posts
 ---
+<figure class="image">
+    <a href="/assets/images//assets/images/101-icon.jpg"><img src="/assets/images/101-icon.jpg"></a>
+    <figcaption>Photo by Austin Distel on Unsplash.</figcaption>
+</figure>
 
 السبت 6 ربيع الأخر 1437 هـ - 16 يناير 2016م - العدد 17372, صفحة رقم ( 35 )
 

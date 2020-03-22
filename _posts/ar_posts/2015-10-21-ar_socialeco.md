@@ -1,5 +1,7 @@
 ---
 title: "اقتصاد الشبكات الاجتماعية"
+header: 
+  teaser: /assets/images/105-icon.jpg
 layout: ar_posts
 date: 2015-10-21
 tags:
@@ -7,6 +9,9 @@ tags:
     - اقتصاد-الشبكات-الاجتماعية
 categories: ar_posts
 ---
+<figure class="image">
+    <a href="/assets/images//assets/images/105-icon.jpg"><img src="/assets/images/105-icon.jpg"></a>
+    <figcaption>Photo by Hugh Han on Unsplash</figcaption>
 
 نشر في جريدة الرياض الاثنين 28 ذي الحجة 1436 هـ – 12 اكتوبر 2015 م – العدد 17276, صفحة رقم ( 26 )
 
