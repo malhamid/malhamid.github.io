@@ -111,9 +111,9 @@ author:
   bio              : "PhD, Machine Learning and AI"
   email            :
   links: 
-    - label: "linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/malhamid"
+    # - label: "linkedin"
+    #   icon: "fab fa-fw fa-linkedin"
+    #   url: "https://www.linkedin.com/in/malhamid"
     - label: "medium"
       icon: "fab fa-fw fa-medium"
       url: "https://medium.com/@moh.alhamid"
