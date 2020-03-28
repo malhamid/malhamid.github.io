@@ -221,7 +221,7 @@ x_elements_np, x_counts_np = np.unique(x_array_np, return_counts=True)
 <img src="/assets/images/115-icon.png" alt="">
 
 يوضح الشكل التالي أداء Numby مع مكتبة Numba. لاحظ أن الرقم قد يختلف اعتمادًا على حجم البيانات. توضح الأرقام في الرسم البياني متوسط تكرار التجربة لخمس مرات.
-
+<img src="/assets/images/117-icon.png" alt="">
 <br/><br/>
 <h1> المزيد من الأمثلة </h1>
 <h2> تحليل القيم المنفردة (SVD) </h2>
