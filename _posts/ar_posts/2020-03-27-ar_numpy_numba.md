@@ -2,11 +2,10 @@
 title: <div class="col-md-6 text-right">فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba</div>
 dir: rtl
 layout: single_ar
-permalink: /about/
+permalink: /numpy_vs_numba/
 ---
-
-
 <img src="/assets/images/113-icon.jpg" alt="">
+<figcaption><a href="https://unsplash.com/@impatrickt">Photo by Patrick Tomasso on Unsplash</a></figcaption>
 
 <div style="direction: rtl; text-align: right;">
 NumPy و Numba هما حزمتان رائعتان متاحتان بلغة بايثون لإجراء عمليات على المصفوفات. كلاهما يعملان بكفاءة على مصفوفات متعددة الأبعاد. في لغة بايثون، تحمل طريقة بناء المتجهات طبيعة ديناميكية. سيؤدي إلحاق قيم جديدة بالمصفوفة إلى زيادة حجم المصفوفة تلقائياً. تعمل مصفوفات NumPy بشكل مختلف حيث تُبنى المصفوفات في أحجام ثابتة. يعني ذلك أن اضافة أو إزالة أي عنصر يقتضي إنشاء مصفوفة جديدة تماماً داخل الذاكرة. في هذه المقالة، نتطلع إلى إيجاد بنية ذات كفاءة تكون فعالة لحل بعض المشاكل البسيطة.

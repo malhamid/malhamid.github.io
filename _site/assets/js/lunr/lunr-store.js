@@ -89,16 +89,6 @@ var store = [{
         "tags": ["الاستثمار-في-المعلوماتية","الاستثمار-في-البيانات"],
         "url": "http://localhost:4000/ar_posts/ar_techinvest/",
         "teaser":"http://localhost:4000/assets/images/invest-icon.jpg"},{
-        "title": "Features Engineering in ML",
-        "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
-        "tags": ["Machine Learning","ML","Feature Engineering","AI"],
-        "url": "http://localhost:4000/feature_engineering-Copy/",
-        "teaser":"http://localhost:4000/assets/images/ai-icon.jpg"},{
-        "title": "Features Engineering in ML",
-        "excerpt":"Look at the sites you frequent and take note of their readability. Inspect their CSS of your favorites: Right-click &gt; Inspect Element on the paragraph you like and steal their font-size, line-height, and paragraph width. Welcome I recently spent some time improving the typography of this blog. Here are the...","categories": [],
-        "tags": ["Machine Learning","ML","Feature Engineering","AI"],
-        "url": "http://localhost:4000/feature_engineering/",
-        "teaser":"http://localhost:4000/assets/images/ai-icon.jpg"},{
         "title": "الكتب، الدورات، وقواعد البيانات التي يجب على كل عالم بيانات معرفتها",
         "excerpt":"نشر في موقع نمذجيات - ٧ ديسمبر 2019م بادئ ذي بدء، أنت على الطريق الصحيح. يعد العمل على تعلم الآلة (Machine Learning) من أجل بناء معرفتك في مجال الذكاء الاصطناعي خياراً مميزاً. تحرز تقنيات الذكاء الاصطناعي تقدماً هائلاً ليس فقط في تطوير البرمجيات بل كل جانب من جوانب حياتنا اليومية....","categories": ["ar_posts"],
         "tags": ["كتب-في-تعلم-الآلة","مراجع-في-تعلم-الآلة"],
@@ -115,7 +105,7 @@ var store = [{
         "url": "http://localhost:4000/ar_posts/ar_ml_mistakes/",
         "teaser":"https://i0.wp.com/www.nmthgiat.com/wp-content/uploads/2020/02/mitsakes.jpg?zoom=2&resize=768%2C295&ssl=1"},{
         "title": "<div class=\"col-md-6 text-right\">فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba</div>",
-        "excerpt":"NumPy و Numba هما حزمتان رائعتان متاحتان بلغة بايثون لإجراء عمليات على المصفوفات. كلاهما يعملان بكفاءة على مصفوفات متعددة الأبعاد. في لغة بايثون، تحمل طريقة بناء المتجهات طبيعة ديناميكية. سيؤدي إلحاق قيم جديدة بالمصفوفة إلى زيادة حجم المصفوفة تلقائياً. تعمل مصفوفات NumPy بشكل مختلف حيث تُبنى المصفوفات في أحجام ثابتة....","categories": [],
+        "excerpt":"Photo by Patrick Tomasso on Unsplash NumPy و Numba هما حزمتان رائعتان متاحتان بلغة بايثون لإجراء عمليات على المصفوفات. كلاهما يعملان بكفاءة على مصفوفات متعددة الأبعاد. في لغة بايثون، تحمل طريقة بناء المتجهات طبيعة ديناميكية. سيؤدي إلحاق قيم جديدة بالمصفوفة إلى زيادة حجم المصفوفة تلقائياً. تعمل مصفوفات NumPy بشكل مختلف...","categories": [],
         "tags": [],
-        "url": "http://localhost:4000/about/",
+        "url": "http://localhost:4000/numpy_vs_numba/",
         "teaser":null}]

@@ -1,0 +1,635 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba  AI and Machine Learning Blog</title>
+<meta name="description" content="Photo by Patrick Tomasso on Unsplash">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="AI and Machine Learning Blog">
+<meta property="og:title" content="فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba">
+<meta property="og:url" content="http://localhost:4000/numpy_vs_numba/">
+
+
+  <meta property="og:description" content="Photo by Patrick Tomasso on Unsplash">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-03-27T00:00:00-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/numpy_vs_numba/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohammed Alhamid",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AI and Machine Learning Blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single_ar">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">AI and Machine Learning Blog</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ar_home" >مقالات</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main" >
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/alhamid-profile.jpg" alt="Mohammed Alhamid" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Mohammed Alhamid</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        PhD, Machine Learning and AI
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://medium.com/@moh.alhamid" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-medium" aria-hidden="true"></i> medium</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba">
+    <meta itemprop="description" content="Photo by Patrick Tomasso on Unsplash">
+    <meta itemprop="datePublished" content="March 27, 2020">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline"><div class="col-md-6 text-right">فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba</div>
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text" >
+        
+        <p><img src="/assets/images/113-icon.jpg" alt="" /></p>
+<figcaption><a href="https://unsplash.com/@impatrickt">Photo by Patrick Tomasso on Unsplash</a></figcaption>
+
+<div style="direction: rtl; text-align: right;">
+NumPy و Numba هما حزمتان رائعتان متاحتان بلغة بايثون لإجراء عمليات على المصفوفات. كلاهما يعملان بكفاءة على مصفوفات متعددة الأبعاد. في لغة بايثون، تحمل طريقة بناء المتجهات طبيعة ديناميكية. سيؤدي إلحاق قيم جديدة بالمصفوفة إلى زيادة حجم المصفوفة تلقائياً. تعمل مصفوفات NumPy بشكل مختلف حيث تُبنى المصفوفات في أحجام ثابتة. يعني ذلك أن اضافة أو إزالة أي عنصر يقتضي إنشاء مصفوفة جديدة تماماً داخل الذاكرة. في هذه المقالة، نتطلع إلى إيجاد بنية ذات كفاءة تكون فعالة لحل بعض المشاكل البسيطة.
+<br /><br />
+ما هو أساسي عند بدأ النقاش ليس فقط كيفية إنشاء المصفوفة، بل كيفية تطبيق العمليات العلمية المكلفة على هذه المصفوفات، خاصة المصفوفات التي تطلب مسح كافة القيم. الأداء هو الدافع الرئيسي لامتلاك تلك المكتبات عندما نطبق عليها بعض العمليات المكلفة. على سبيل المثال، عندما نقوم بتطوير نماذج تعلم الآلة، خاصة في البيئة التشغيلية، فإننا نقضي قدراً معقولاً من الوقت في تحسين الشفرات التي تنشئ بيانات التدريب باستخدام أي تحويلات مطلوبة أو أي عملية أخرى تتعلق باستخراج وتحويل وتحميل البيانات (ETL). يعد استخدام بعض لغات الآلة البرمجية مثل لغة C أو Fortran أمراً مثالياً، ولكن يتطلب منا إنشاء غلاف "wrapper"  هنا وهناك لإعادة العملية التنفيذية للغة بايثون.
+<br /><br /><br />
+<h1> بناء المصفوفات في بايثون </h1>
+
+دعونا نحصل على مثال بسيط: أولاً، سننشئ متجه بسيط بلغة بايثون يحتوي على عشرة ملايين صف. سنتمكن من خلال هذا العدد الكبير ابراز الاختلافات في الأداء بسهولة.
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># We need to import the random package to fillup the array with some random values.import random
+array = []
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+
+أنا استخدم IPython ؛ إذا كنت تقوم بتشغيل هذه الشفرات على Jupyter Notebook ، فأوصي باستخدام الأمر "السحري" المدمج (time).
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%time
+for i in range(0,10000000):
+	val = random.randint(0,1000)
+	array.append(val)
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+<br /><br /><br />
+<h1> حساب التردد </h1>
+
+
+دعونا نبحث في هذه القائمة عن عدد الصفوف التي تحتوي على القيمة 999؟
+
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%time
+freq = 0 
+for value in array: 
+	if value == 999: 
+		freq = freq + 1
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+استغرق تنفيذ الأمر على جهازي الخاص 461 مل ثانية ، ووجدت الدالة 10184 مثيلاً للقيمة 999. والآن دعنا نرى كيفية القيام بنفس المهمة باستخدام مصفوفات NumPy.
+
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import numpy as np
+
+# We use the same list created earlier: 
+np_array = np.array(array)
+# To get a sense of the size of the bumpy array, simply call up the function 'shape'
+print('The size of the numpy array: ', np_array.shape)
+</code></pre></div></div>
+<div style="direction: rtl; text-align: right;">
+البحث عن عدد الصفوف التي تحتوي على القيمة 999 في مصفوفة NumPy هو سطر واحد فقط من التعليمات 
+البرمجية:
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%time
+result = np.where(np_array == 999)
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+
+بالإضافة إلى كتابة بعض القليل من التعليمات لتنفيذ نفس المهمة، استغرق الأمر 12.6 مل ثانية للقيام بنفس مهمة المصفوفة التقليدية.
+
+يرجى ملاحظة أن آلية الفهرسة لمصفوفة NumPy تشبه أي قائمة تقليدية بلغة بايثون.
+
+الآن سنجعل المثال أكثر إثارة للاهتمام من خلال ادخال بعض العمليات الرياضية على قيم المصفوفة. أولاً، سنقوم ببناء ثلاثة متجهات (X ، Y ، Z) من القائمة الأصلية ومن ثم سنقوم بنفس المهمة 
+باستخدام NumPy.
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%time
+def apply_operation_list(array): 
+    # We need to build an X vector from the original array
+    # The math operations in this function represents some random logic.
+    x_array = [] 
+    for array_v in array: 
+        x_array.append(array_v * 2)
+    
+    # Building the Y vector
+    y_array = []
+    for array_v, x_array_v in zip(array, x_array): 
+        y_array.append(array_v + x_array_v)
+    
+    # Building the Z vector
+    z_array = []
+    for array_v, x_array_v, y_array_v in zip(array, x_array, y_array):
+        if x_array_v == 0: 
+            z_array.append(0)
+        else: 
+            z_array.append((array_v - x_array_v ) + y_array_v)
+    
+    return x_array, y_array, z_array
+%%time
+x_array, y_array, z_array = apply_operation_list(array)
+</code></pre></div></div>
+<div style="direction: rtl; text-align: right;">
+استغرق تطبيق العملية على القائمة 3.01 ثانية.
+دعونا نعيد نفس الوظيفة باستخدام Numpy:
+
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def apply_operation_numpy(array): 
+    # We need to build an X vector from the original array
+    # The math operations in this function represent some random logic.
+    x_array = array * 2
+    
+    # Building the Y vector
+    y_array = array + x_array
+    
+    # Building the Z vector
+    z_array = ( array - x_array ) + y_array
+    
+    return x_array, y_array, z_array
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+
+باستخدام Numpy ، استغرق الأمر 132 مل ثانية فقط.
+<br /><br />
+<h1> Numba </h1>
+<img src="/assets/images/114-icon.png" alt="" />
+
+<br /><br />
+تعمل مكتبة Numba بشكل مثالي مع العمليات البرمجية المكتوبة بلغة بايثون ويمنحك امتياز استخدام مكتباتك الرياضية المفضلة لديك ولكن تم تجميعها وفقاً لتعليمات الآلة الأصلية [2]. يعد استخدام Numba أمراً بسيطاً ولا يتطلب منك تغيير الطريقة التي تكتب بها الدالة:
+
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Loading the Numba package
+# Jit tells numba the function we want to compile
+from numba import jit
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+لاحظ أن كل ما يتعين علينا تغييره مقارنة بالدالة السابقة التي استخدمنا فيها Numpy المحددة أعلاه.
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@jit
+def apply_operation_numba(array): 
+    # We need to build an X vector from the original array
+    # The math operations in this function represents some random logic.
+    x_array = array * 2
+    
+    # Building the Y vector
+    y_array = array + x_array
+    
+    # Building the Z vector
+    z_array = ( array - x_array ) + y_array
+    
+    return x_array, y_array, z_array
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+
+باستخدام Numba ، استغرق حساب المتجهات الثلاثة 71.5 مل ثانية فقط.
+
+<br /><br />
+<h1> أيهما نستخدم؟ </h1>
+
+<em>
+"NumPy هي الحزمة الأساسية للحوسبة العلمية مع بايثون. تحتوي بالإضافة إلى أشياء أخرى على كل من: مصفوفات ذات كفاءة متعددة الأبعاد، وظائف (بث) متطورة، وأدوات لدمج أكواد ++C /C و Fortran ، وكذلك الجبر الخطي، وتحويل فورييه ، وقدرات لاستصدار الأرقام العشوائية "[1]
+</em>
+
+<br /><br />
+
+NumPy عبارة عن حاوية هائلة لضغط مساحة المتجه الخاصة بك وتوفير مصفوفات أكثر كفاءة. أهم ميزة هي أداء تلك الحاويات عند إجراء أي معالجة لهذه المتجهات.
+
+
+تم تصميم Numba ، من ناحية أخرى ، لتوفير أكواد بلغة الآلة الأم يعكس وظائف لغة بايثون. يمكن النظر إلى لغة بايثون كغلاف لدوال Numba. من تجربتي ، نستخدم Numba في حالات كانت الوظيفة المراد عملها لا تُدعم من قبل Numpy. أي أن الوظيفة لا تتوفر من هذه المكتبة لمعالجة المتجهات. إذا كانت الوظيفة المخصصة التي تم تنفيذها ليست سريعة بما يكفي في سياقنا ، فيمكن أن تساعدنا Numba في إنشاء هذه الوظيفة داخل مترجم بايثون. هذه هي أيضاً التوصية المتاحة من شرح مكتبة Numba الرسمي.
+
+<br /><br />
+لا يوضح المثال المقدم في وقت سابق مدى أهمية الفرق؟ هذا صحيح لأننا نبحث فقط عن تكرار قيمة واحدة. دعنا نكرر التجربة عن طريق حساب تكرار جميع القيم المتوفرة في العمود.
+
+<br /><br />
+في  لغة بايثون ، الطريقة الأكثر فعالية لتجنب ما يسمى بالعقدة البرمجية المتداخلة - ذات التكلفة O ^ 2  - هو استخدام الدالة "العداد" (count). باستخدام سطر واحد فقط من الكود ، يمكننا حساب ترددات العمود كاملاً:
+
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%time
+count = {x:x_array.count(x) for x in x_array}
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+ومع ذلك ، اعتماداً على قوة المعالجة لديك ، قد تستغرق هذه الوظيفة ساعات لإكمال 10 ملايين سجل. دعنا نرى بعد ذلك ما يمكن أن تقدمه Numpy:
+
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>%%time
+x_elements_np, x_counts_np = np.unique(x_array_np, return_counts=True)
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+استغرق حساب تردد عمود بطول مليون صف 388 مللي ثانية باستخدام Numpy. نقلة كبيرة في الأداء! لاحظ أن هذه الوظيفة يتم تحسينها عن طريق حساب تردد القيم المميزة فقط. هذا مثال يوضح كيف أن استخدام حلقة متداخلة في بيئة بيانات كبيرة أمر غير واقعي.
+
+<br /><br />
+حتى وقت قريب ، لم تكن Numba تدعم وظيفة np.unique ، ولكن مع ذلك ، لن تحصل على أي فائدة إذا استخدمت مع return_counts. هذا فقط يظهرأنه في بعض الأحيان يمكن أن يكون Numpy هو الخيار الأفضل عند الاختيار.
+
+<br /><br />
+وأخيرًا ، يوضح الرسمان التاليان أداء وقت التشغيل باستخدام بنية بيانات مختلفة. يمثل المحور س زيادة تدريجية في حجم البيانات من 10000 صف إلى مليار صف.
+
+<img src="/assets/images/115-icon.png" alt="" />
+
+يوضح الشكل التالي أداء Numby مع مكتبة Numba. لاحظ أن الرقم قد يختلف اعتماداً على حجم البيانات. توضح الأرقام في الرسم البياني متوسط تكرار التجربة لخمس مرات.
+<img src="/assets/images/117-icon.png" alt="" />
+<br /><br />
+<h1> المزيد من الأمثلة </h1>
+<h2> تحليل القيم المنفردة (SVD) </h2>
+
+مثال التكرار هو مجرد تطبيق واحد قد لا يكون كافيا لرسم انطباع شامل ، لذلك دعونا نختار SVD كمثال آخر. SVD هي خوارزمية تعلم غير موجَّه. تسمح الخوارزمية بتفكيك مصفوفة كبيرة إلى منتج من مصفوفات متعددة أصغر في الحجم. SVD لديه العديد من التطبيقات في تعلم الآلة ويستخدم لتقليل الأبعاد. <a href="https://towardsdatascience.com/svd-8c2f72e264f/">هنا مقال لقراءة المزيد عن هذه الخوارزمية.</a>
+<br /><br />
+يستخدم المثال المكتوب أدناه بعدين اثنين (أعمدة) فقط بنفس عدد الصفوف كما في المثال السابق.
+
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from scipy.linalg import svd
+# We will consider in this example only two dimensions. 
+# m x 2 
+# U: m x r 
+# s: Diagonal matrix r x r
+# VT: n x r
+U, s, VT = svd(array_np[:, 0:2])
+Sigma = np.zeros((array_np.shape[0], 2))
+Sigma[:2, :2] = np.diag(s)
+</code></pre></div></div>
+<div style="direction: rtl; text-align: right;">
+إذا حاولت تشغيل الكود ، فربما تحصل على خطأ مشابه للرسالة التالية: “ValueError: Too large work array required — computation cannot be performed with standard 32-bit LAPACK.”. وذلك لأن التنفيذ الداخلي لـ lapack-lite يستخدم متغيرات من نوع int للفهرس. مع حجم كبير مثل المجموعة المستخدمة ، سيؤدي ذلك بالتأكيد إلى تجاوز الحد التي تستطيع فهرسته. علينا إما تقليل حجم المتجه أو استخدام خوارزمية بديلة. إذا ما حاولنا استخدام وظيفة SVD مع مكتبة Numba ، فلن نحصل على أي مزايا ملحوظة وذلك لان الدالة تستدعي وظيفة LAPACK SVD.
+
+<br /><br />
+<h1> ضرب المصفوفات </h1>
+
+ضرب المصفوفات هو مثال آخر يوضح كيف يمكن أن يكون Numba مفيدة لزيادة وقت المعالجة. حتى بدون Cuda ، يمكننا تحقيق أداء أفضل. دعونا نأخذ المثال خطوة بخطوة. كما فعلنا من قبل ، سننفذ وظيفة أولاً باستخدام "قائمة" بايثون.
+
+</div>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def matrix_multiplication(A,B):
+    row, col_A = A.shape
+    col_B = B.shape[1]
+    result = np.zeros((row,col_B))
+    for i in range(0,row):
+        for j in range(0,col_B):
+            for k in range(0,col_A):
+                result[i,j] += A[i,k]*B[k,j] 
+    return result
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+لمعالجة 10 ملايين صف، تكون "القائمة" سريعة جداً في معالجة ضرب المصفوفات. وقت التشغيل هو 1 دقيقة و 7 ثوان فقط. باستخدام Numpy ، استغرق الأمر 95 ثانية للقيام بنفس المهمة.
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def matrix_multiplication_numpy(A,B):
+    result = np.dot(A,B)
+    return result
+
+%%time
+result = matrix_multiplication_numpy(array_np, array_np)
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+الآن بعد استبدال Numby بـ Numba ، قمنا بتقليل عمليات الضرب المكلفة من خلال وظيفة بسيطة أدت إلى 68 ثانية فقط أي تقليل الوقت بنسبة 28٪.
+</div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@jit
+def matrix_multiplication_numba(A, B, result):
+    for i in range(result.shape[0]):
+        for j in range(result.shape[1]):
+            tmp = 0.
+            for k in range(A.shape[1]):
+                tmp += A[i, k] * B[k, j]
+            result[i, j] = tmp
+</code></pre></div></div>
+
+<div style="direction: rtl; text-align: right;">
+توضح الشكل البياني التالي أداء ضرب المصفوفة باستخدام قائمة Python ، مع Numpy ، وباستخدام مكتبة Numpy.
+
+
+<img src="/assets/images/116-icon.png" alt="" />
+
+تم تشغيل الأمثلة المقدمة في هذه المدونة على جهاز MacBook Pro مقاس 15 بوصة 2018 وحجم الذاكرة 16 جيجابايت واستخدام توزيعة أناكوندا. يمكن العثور على التعليمات البرمجية المستخدمة في هذه الأمثلة في مستودع <a href="https://github.com/malhamid/Python-useful-tools/blob/master/NumPy_Numba_comparisons.ipynb
+"> Github</a>
+ الخاص بي. يمكن تحسين الأداء باستخدام بيئة GPU ، والتي لم يتم أخذها في الاعتبار في هذه المقارنة.
+
+<br /><br />
+<h1> المراجع </h1>
+</div>
+<p>[1] Official NumPy website, available online at https://numpy.org
+[2] Official Numba website, available online at http://numba.pydata.org</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-03-27T00:00:00-04:00">March 27, 2020</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/ar_posts/ar_ml_mistakes/" class="pagination--pager" title="أهم عشرة أخطاء إحصائية يرتكبها علماء البيانات
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/malhamid" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Mohammed Alhamid. 
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>

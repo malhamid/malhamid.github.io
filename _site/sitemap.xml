@@ -73,14 +73,6 @@
 <lastmod>2016-12-21T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/feature_engineering-Copy/</loc>
-<lastmod>2019-04-01T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/feature_engineering/</loc>
-<lastmod>2019-04-01T00:00:00-04:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/ar_posts/ar_ml_resources/</loc>
 <lastmod>2019-12-07T00:00:00-05:00</lastmod>
 </url>
@@ -93,7 +85,7 @@
 <lastmod>2019-12-07T00:00:00-05:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/about/</loc>
+<loc>http://localhost:4000/numpy_vs_numba/</loc>
 <lastmod>2020-03-27T00:00:00-04:00</lastmod>
 </url>
 <url>
