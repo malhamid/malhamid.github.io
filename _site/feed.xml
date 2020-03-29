@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-28T19:26:10-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba</title><link href="http://localhost:4000/about/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba&lt;/div&gt;" /><published>2020-03-27T00:00:00-04:00</published><updated>2020-03-27T00:00:00-04:00</updated><id>http://localhost:4000/ar_numpy_numba</id><content type="html" xml:base="http://localhost:4000/about/">&lt;p&gt;&lt;img src=&quot;/assets/images/113-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-03-28T20:39:05-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba</title><link href="http://localhost:4000/about/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba&lt;/div&gt;" /><published>2020-03-27T00:00:00-04:00</published><updated>2020-03-27T00:00:00-04:00</updated><id>http://localhost:4000/ar_numpy_numba</id><content type="html" xml:base="http://localhost:4000/about/">&lt;p&gt;&lt;img src=&quot;/assets/images/113-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
-NumPy و Numba هما حزمتان رائعتان متاحتان بلغة بايثون لإجراء عمليات على المصفوفات. كلاهما يعمل بكفاءة على مصفوفات متعددة الأبعاد. في لغة بايثون، تحمل طريقة بناء المتجهات طبيعة ديناميكية. سيؤدي إلحاق قيم جديدة بالمصفوفة إلى زيادة حجم المصفوفة تلقائياً. تعمل مصفوفات NumPy بشكل مختلف حيث تُبنى المصفوفات في أحجام ثابتة. يعني ذلك أن اضافة أو إزالة أي عنصر يقتضي إنشاء مصفوفة جديدة تماماً داخل الذاكرة. في هذه المقالة، نتطلع إلى إيجاد بنية ذات كفاءة تكون فعالة لحل بعض المشاكل البسيطة.
+NumPy و Numba هما حزمتان رائعتان متاحتان بلغة بايثون لإجراء عمليات على المصفوفات. كلاهما يعملان بكفاءة على مصفوفات متعددة الأبعاد. في لغة بايثون، تحمل طريقة بناء المتجهات طبيعة ديناميكية. سيؤدي إلحاق قيم جديدة بالمصفوفة إلى زيادة حجم المصفوفة تلقائياً. تعمل مصفوفات NumPy بشكل مختلف حيث تُبنى المصفوفات في أحجام ثابتة. يعني ذلك أن اضافة أو إزالة أي عنصر يقتضي إنشاء مصفوفة جديدة تماماً داخل الذاكرة. في هذه المقالة، نتطلع إلى إيجاد بنية ذات كفاءة تكون فعالة لحل بعض المشاكل البسيطة.
 &lt;br /&gt;&lt;br /&gt;
-ما هو أساسي عند بدأ النقاش ليس فقط كيفية إنشاء المصفوفة، بل كيفية تطبيق العمليات العلمية المكلفة على هذه المصفوفات، خاصة المصفوفات التي تطلب مسح كافة القيم. الأداء هو الدافع الرئيسي لامتلاك تلك المكتبات عندما نطبق عليها بعض العمليات المكلفة. على سبيل المثال، عندما نقوم بتطوير نماذج تعلم الآلة، خاصة في البيئة التشغيلية، فإننا نقضي قدراً معقولاً من الوقت في تحسين الشفرات التي تنشئ بيانات التدريب باستخدام أي تحويل مطلوبة أو أي عملية أخرى تتعلق باستخراج وتحويل وتحميل البيانات (ETL). يعد استخدام بعض لغات الآلة البرمجية مثل لغة C أو Fortran أمراً مثالياً، ولكن يتطلب منا إنشاء غلاف &quot;wrapper&quot;  هنا وهناك لإعادة العملية التنفيذية للغة بايثون.
+ما هو أساسي عند بدأ النقاش ليس فقط كيفية إنشاء المصفوفة، بل كيفية تطبيق العمليات العلمية المكلفة على هذه المصفوفات، خاصة المصفوفات التي تطلب مسح كافة القيم. الأداء هو الدافع الرئيسي لامتلاك تلك المكتبات عندما نطبق عليها بعض العمليات المكلفة. على سبيل المثال، عندما نقوم بتطوير نماذج تعلم الآلة، خاصة في البيئة التشغيلية، فإننا نقضي قدراً معقولاً من الوقت في تحسين الشفرات التي تنشئ بيانات التدريب باستخدام أي تحويلات مطلوبة أو أي عملية أخرى تتعلق باستخراج وتحويل وتحميل البيانات (ETL). يعد استخدام بعض لغات الآلة البرمجية مثل لغة C أو Fortran أمراً مثالياً، ولكن يتطلب منا إنشاء غلاف &quot;wrapper&quot;  هنا وهناك لإعادة العملية التنفيذية للغة بايثون.
 &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
 &lt;h1&gt; بناء المصفوفات في بايثون &lt;/h1&gt;
 
@@ -124,7 +124,7 @@ x_array, y_array, z_array = apply_operation_list(array)
 &lt;img src=&quot;/assets/images/114-icon.png&quot; alt=&quot;&quot; /&gt;
 
 &lt;br /&gt;&lt;br /&gt;
-تعمل مكتبة Numba بشكل مثالي مع العمليات البرمجية المكتوبة بلغة بايثون ويمنحك امتياز استخدام مكتباتك الرياضية المفضلة لديك ولكن تم تجميعه وفقاً لتعليمات الآلة الأصلية [2]. يعد استخدام Numba أمراً بسيطاً ولا يتطلب منك تغيير الطريقة التي تكتب بها الدالة:
+تعمل مكتبة Numba بشكل مثالي مع العمليات البرمجية المكتوبة بلغة بايثون ويمنحك امتياز استخدام مكتباتك الرياضية المفضلة لديك ولكن تم تجميعها وفقاً لتعليمات الآلة الأصلية [2]. يعد استخدام Numba أمراً بسيطاً ولا يتطلب منك تغيير الطريقة التي تكتب بها الدالة:
 
 &lt;/div&gt;
 
@@ -202,7 +202,7 @@ x_elements_np, x_counts_np = np.unique(x_array_np, return_counts=True)
 
 &lt;img src=&quot;/assets/images/115-icon.png&quot; alt=&quot;&quot; /&gt;
 
-يوضح الشكل التالي أداء Numby مع مكتبة Numba. لاحظ أن الرقم قد يختلف اعتمادًا على حجم البيانات. توضح الأرقام في الرسم البياني متوسط تكرار التجربة لخمس مرات.
+يوضح الشكل التالي أداء Numby مع مكتبة Numba. لاحظ أن الرقم قد يختلف اعتماداً على حجم البيانات. توضح الأرقام في الرسم البياني متوسط تكرار التجربة لخمس مرات.
 &lt;img src=&quot;/assets/images/117-icon.png&quot; alt=&quot;&quot; /&gt;
 &lt;br /&gt;&lt;br /&gt;
 &lt;h1&gt; المزيد من الأمثلة &lt;/h1&gt;
@@ -230,7 +230,7 @@ Sigma[:2, :2] = np.diag(s)
 &lt;br /&gt;&lt;br /&gt;
 &lt;h1&gt; ضرب المصفوفات &lt;/h1&gt;
 
-ضرب المصفوفات هو مثال آخر يوضح كيف يمكن أن يكون Numba مفيداً لزيادة وقت المعالجة. حتى بدون Cuda ، يمكننا تحقيق أداء أفضل. دعونا نأخذ المثال خطوة بخطوة. كما فعلنا من قبل ، سننفذ وظيفة أولاً باستخدام &quot;قائمة&quot; بايثون.
+ضرب المصفوفات هو مثال آخر يوضح كيف يمكن أن يكون Numba مفيدة لزيادة وقت المعالجة. حتى بدون Cuda ، يمكننا تحقيق أداء أفضل. دعونا نأخذ المثال خطوة بخطوة. كما فعلنا من قبل ، سننفذ وظيفة أولاً باستخدام &quot;قائمة&quot; بايثون.
 
 &lt;/div&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def matrix_multiplication(A,B):
@@ -276,7 +276,7 @@ def matrix_multiplication_numba(A, B, result):
 
 &lt;img src=&quot;/assets/images/116-icon.png&quot; alt=&quot;&quot; /&gt;
 
-تم تشغيل الأمثلة المقدمة في هذه المدونة على جهاز MacBook Pro مقاس 15 بوصة 2018 بحجم 16 جيجابايت واستخدام توزيعة أناكوندا. يمكن العثور على التعليمات البرمجية المستخدمة في هذه الأمثلة في مستودع &lt;a href=&quot;https://github.com/malhamid/Python-useful-tools/blob/master/NumPy_Numba_comparisons.ipynb
+تم تشغيل الأمثلة المقدمة في هذه المدونة على جهاز MacBook Pro مقاس 15 بوصة 2018 وحجم الذاكرة 16 جيجابايت واستخدام توزيعة أناكوندا. يمكن العثور على التعليمات البرمجية المستخدمة في هذه الأمثلة في مستودع &lt;a href=&quot;https://github.com/malhamid/Python-useful-tools/blob/master/NumPy_Numba_comparisons.ipynb
 &quot;&gt; Github&lt;/a&gt;
  الخاص بي. يمكن تحسين الأداء باستخدام بيئة GPU ، والتي لم يتم أخذها في الاعتبار في هذه المقارنة.
 
