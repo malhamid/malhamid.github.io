@@ -11,7 +11,8 @@ categories: ar_posts
 ---
 <figure class="image">
     <a href="/assets/images//assets/images/108-icon.jpg"><img src="/assets/images/108-icon.jpg"></a>
-    <figcaption>Photo by Nathan Hobbs on Unsplash</figcaption>
+
+<small>Photo by Nathan Hobbs on Unsplash</small>
 
 الاثنين 16 ذي القعدة 1436 هـ - 31 اغسطس 2015م - العدد 17234, صفحة رقم ( 26 )
 

@@ -11,7 +11,8 @@ categories: ar_posts
 ---
 <figure class="image">
     <a href="/assets/images//assets/images/107-icon.jpg"><img src="/assets/images/107-icon.jpg"></a>
-    <figcaption>Photo by Nathan Hobbs on Unsplash</figcaption>
+
+<small>Photo by Nathan Hobbs on Unsplash</small>
 
 
 نشر في جريدة الرياض . الأربعاء 2 ذي الحجة 1436 هـ - 16 سبتمبر 2015م - العدد 17250, صفحة رقم ( 34 )

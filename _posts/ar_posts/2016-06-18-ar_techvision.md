@@ -10,9 +10,11 @@ tags:
 categories: ar_posts
 ---
 <figure class="image">
-    <a href="/assets/images//assets/images/invest-tech-icon.jpg"><img src="/assets/images/invest-tech-icon.jpg"></a>
-    <figcaption>Photo by NASA on Unsplash</figcaption>
-</figure>
+    <a href="/assets/images//assets/images/invest-tech-icon.jpg"><img src="/assets/images/invest-tech-icon.jpg"></a></figure>
+
+
+<small>Photo by NASA on Unsplash</small>
+
 
 
 

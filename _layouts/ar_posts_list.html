@@ -1,31 +1,59 @@
 ---
-layout: archive
+layout: ar_posts_list_layout
 author_profile: true
 ---
-<div dir="rtl">
-{{content}} 
-</div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
-<ul class="taxonomy__index">
-  {% assign postsInYear = site.categories.ar_posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-  {% for year in postsInYear %}
-    <li>
-      <a href="#{{ year.name }}">
-        <strong>{{ year.name }}</strong> <span class="taxonomy__count">{{ year.items | size }}</span>
-      </a>
-    </li>
-  {% endfor %}
-</ul>
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    
+    <script src="{{ '/assets/js/main.min.js' | prepend: site.baseurl }}"></script>
+    <script src="{{ '/javascripts/fontfaceobserver.js' | prepend: site.baseurl }}"></script>
+   
+    {% include head.html %}
+  </head>
 
-{% assign postsByYear = site.categories.ar_posts | group_by_exp: 'post', 'post.date | date: "%Y"' %}
-{% for year in postsByYear %}
-  <section id="{{ year.name }}" class="taxonomy__section">
-    <h2 class="archive__subtitle">{{ year.name }}</h2>
-    <div class="entries-{{ page.entries_layout | default: 'list' }}">
-      {% for post in year.items %}
-        {% include archive-single.html type=page.entries_layout %}
+  <body lang="ar">
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          {% if site.avatar %}
+          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+          {% endif %}
+
+          <div class="site-info">
+            <!-- <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1> -->
+            <h1 class="site-name"><a href="{{ site.baseurl }}/">محمد الحامد</a></h1>
+            <!--<p class="site-description">{{ site.description }}</p>-->
+            <p class="site-description">دكتوراه، الذكاء الاصطناعي وتعلم الآلة</p>
+          </div>
+
+          <nav>
+            <a href="{{ site.baseurl }}/">الرئيسية</a>
+            <a href="{{ site.baseurl }}/ar_home/">مقالات</a>
+            <a href="{{ site.baseurl }}/about/">عن المؤلف</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+    
+    <div class="posts">
+      {% for post in site.posts %}
+        <article class="post">
+          <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    
+          <div class="entry">
+            {{ post.excerpt }}
+          </div>
+    
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">اكمل القراءة</a>
+        </article>
       {% endfor %}
     </div>
-    <a href="#page-title" class="back-to-top">{{ site.data.ui-text[site.locale].back_to_top | default: 'Back to Top' }} &uarr;</a>
-  </section>
-{% endfor %}
+ 
+    {% include scripts.html %}
+  </body>
+</html>

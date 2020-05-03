@@ -11,7 +11,9 @@ categories: ar_posts
 ---
 <figure class="image">
     <a href="/assets/images//assets/images/invest-icon.jpg"><img src="/assets/images/invest-icon.jpg"></a>
-    <figcaption>Photo by Austin Distel on Unsplash.</figcaption>
+    
+
+<small>Photo by Austin Distel on Unsplash.</small>
 </figure>
 
 نشر في جريدة الرياض - الاثنين 25 صفر 1438 هـ - 21 ديسمبر 2016م - العدد 1550169 , صفحة رقم ( 30 ) 

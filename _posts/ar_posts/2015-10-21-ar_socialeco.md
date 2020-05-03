@@ -11,7 +11,8 @@ categories: ar_posts
 ---
 <figure class="image">
     <a href="/assets/images//assets/images/105-icon.jpg"><img src="/assets/images/105-icon.jpg"></a>
-    <figcaption>Photo by Hugh Han on Unsplash</figcaption>
+
+<small>Photo by Hugh Han on Unsplash</small>
 
 نشر في جريدة الرياض الاثنين 28 ذي الحجة 1436 هـ – 12 اكتوبر 2015 م – العدد 17276, صفحة رقم ( 26 )
 

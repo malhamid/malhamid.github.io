@@ -1,20 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/ar_posts/spam/</loc>
-<lastmod>2007-03-07T00:00:00-05:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/ar_posts/online_auction/</loc>
-<lastmod>2008-04-25T00:00:00-04:00</lastmod>
-</url>
-<url>
 <loc>http://localhost:4000/ar_posts/nextGenerationWeb/</loc>
 <lastmod>2008-08-02T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/ar_posts/payments/</loc>
-<lastmod>2009-01-29T00:00:00-05:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/ar_posts/Soci_tech/</loc>
@@ -102,8 +90,5 @@
 </url>
 <url>
 <loc>http://localhost:4000/page2/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page3/</loc>
 </url>
 </urlset>

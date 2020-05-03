@@ -1,5 +1,5 @@
 ---
-title: "هنا بعض المقالات بالعربية"
+title: "مقالات بالعربية"
 layout: ar_posts_list
 date: 2019-04-01
 permalink: /ar_home/
