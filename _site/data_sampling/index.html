@@ -1,0 +1,410 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.15.2 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>تعلم الآلة ‫-‬ أساليب أخذ العينات  AI and Machine Learning Blog</title>
+<meta name="description" content="">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="AI and Machine Learning Blog">
+<meta property="og:title" content="تعلم الآلة ‫-‬ أساليب أخذ العينات">
+<meta property="og:url" content="http://localhost:4000/data_sampling/">
+
+
+  <meta property="og:description" content="">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2020-05-09T00:00:00-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/data_sampling/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mohammed Alhamid",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="AI and Machine Learning Blog Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single_ar">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">AI and Machine Learning Blog</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/blog" >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about" >About</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ar_home" >مقالات</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main" >
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/alhamid-profile.jpg" alt="Mohammed Alhamid" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Mohammed Alhamid</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        PhD, Machine Learning and AI
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://medium.com/@moh.alhamid" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-medium" aria-hidden="true"></i> medium</a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="تعلم الآلة ‫-‬ أساليب أخذ العينات">
+    <meta itemprop="description" content="">
+    <meta itemprop="datePublished" content="May 09, 2020">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline"><div class="col-md-6 text-right">تعلم الآلة ‫-‬ أساليب أخذ العينات</div>
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text" >
+        
+        <p><img src="/assets/images/119-icon.jpg" alt="" /></p>
+
+<p><small><a href="https://unsplash.com/@impatrickt">Photo by Luke Chesser on Unsplash</a></small></p>
+
+<div style="direction: rtl; text-align: right;">
+لطالما ارتبط مفهوم العينات بالعملية البحثية التي تتطلب اختبار صحة أو قبول فرضيات يتعذر اختبارها على شريحة واسعة أو أمثلة غزيرة.  في تعلم الآلة، سرعان ما نقفز للسؤال عن ماهية البيانات المستخدمة وأحجام توفرها. ستسلط هذه المقالة على الحالات التي نلجأ فيها عند بناء نماذج تعلم الآلة للأخذ بالعينات وتدريب النموذج على عينة من البيانات عوضاً عن كاملها. سنتحدث أيضاً عن أكثر الطرق صحةً سواءً لأغراض التدريب أو الاختبار وما يتعلق بذلك من أساليب علمية.   أهمية أخذ العينات لا يقل أهمية عن هندسة النموذج، حيث وجود خلل في تمثيل البيانات يهبط بدقة أداء النموذج أو بقدرتها على استيعاب أمثلة جديدة خارج نطاق العينة.  
+<br /><br />
+عندما يطرح موضوع الأخذ بالعينات يتبادر العديد من المهتمين ببناء نماذج تعلم الآلة للتحدث عن توزيع البيانات لمجموعات تختص كل منها لمهمة محددة: التدريب، التحقق من التعلم، أو اختبار النموذج. لا شك أن هذه الخطوات تحتاج لأساليب أخذ العينات لكن السؤال الأهم الذي لا يجب أن نتغافل عنه، ماذا لو كان استخدام كامل البيانات في هذه العملية غير ممكن. أي أن كثافة البيانات الممكن استخدامها محدودة.  
+<br /><br />
+تعذُر استخدام جميع البيانات في التدريب يأتي في عدة صور، إما لعدم توفر الإمكانيات لمعالجتها أو عدم إمكانية اسكانها في الذاكرة المؤقتة. على سبيل المثال: لنفرض أن تدريب النموذج لتطبيق معين يجب أن يتم في ثوان، وعليه اللجوء لأخذ عينات أمر أساسي ومنه يجب أن نصل لآلية لأخذ أفضل الصور التي تمثل البيانات الحقيقية. نقصد بالصور هنا تلك العينات التي تصور لنا خصائص البيانات الكبيرة بشكل مختزل مع الحفاظ على خصائصها الإحصائية.
+<br /><br />
+<h3> تعذر استيعاب البيانات الكبيرة </h3>
+
+البيانات تتسم عادة بأحجام مختلفة حسب سياق التطبيق أو النظام الذي يستخلصها من البيئة التشغيلية. وعند رغبتنا في بناء نماذج تعلم الآلة فإن امكانية استيعاب هذه البيانات مبني على توفر بنية تحتية تستطيع استيعاب كمية كبيرة من هذه البيانات. اسكان هذه البيانات في الذاكرة ومعالجتها أمر ليس بالسهولة ووفي الواقع فإن البيئة التشغيلية تحتم علينا التعامل مع عدد محدد من الأحجام.
+<br /><br />
+هذا من جانب، من الجانب الآخر الوقت المستغرق لبناء النموذج يحتم علينا اللجوء لأخذ عينات أو اجتزاء جزء من البيانات الكلية لغرض التدريب. في كثير من الأحيان يتطلب على مهندسي نماذج تعلم الآلة بناء نموذج لا يستغرق تدريبه إلا دقائق معدودة. هذا السبب يعود لتطلع الشركات لاستمرارية تعلم النماذج و استيعاب حقائق جديدة عوضاً عن بناء نموذج واحد مكلف. على سبيل المثال، توقع المبيعات لا يعتمد على بيانات جمعت في السنوات الماضية فقط بل يعتمد على البيانات المتدفقة بشكل مستمر. وفي سياق آخر من الممكن الاكتفاء بنموذج واحد مكلف كالنماذج اللغوية التي لا تحتاج لإعادة التدريب بشكل مستمر وتكون أساليب أخذ العينات ليس بسبب الحجم فقط ولكن لأسباب أخرى سنذكرها في هذا المقال.
+
+<br /><br />
+<h3> عدم توازن البيانات </h3>
+<img src="/assets/images/122-icon.jpg" alt="" />
+
+<br /><br />
+في واقع تعاملنا مع نماذج تعلم الآلة من الطبيعي أن نتوقع وجود خلل في تمثيل البيانات ذلك يعود للطريقة التي جمعت بها. لو أردنا بناء نموذج يتوقع نسبة قبول طالب ما في كلية الطب بناء على أدائه الدراسي فإن المجتمع الذي تمثله البيانات المجمعة يجب أن يكون متوازناً. فلا يمكن دراسة أداء الطلاب دون الطالبات أو أن تمثيل الطلاب يفوق عدد تمثيل الطالبات و العكس صحيح. بالاضافة إلى أهمية الأخذ بعين الاعتبار أخذ عينات من مدراس مختلفة وغيرها. وجود أي خلل في تمثيل هذه البيانات حتماً سيؤثر على أداء النموذج و قدرته على استيعاب حالات جديدة تحمل خصائص احصائية مختلفة عن ما تعلمته الآلة أثناء التدريب.
+<br /><br />
+<h1> ما هي الطرق المناسبة؟ </h1>
+<h3> العينات العشوائية </h3>
+العينات العشوائية فعالة غالباً وتعكس الشكل التمثيلي للبيانات الأساسية بشكل جيد وذلك بسبب إعطاء كل عينة نفس احتمالية الفرصة في الاختيار دون أي انحياز أو تدخل في تشكيل توزيعات هذه العينات. نلجأ للعشوائية في جميع الحالات التي لا يتطلب النموذج فيها على أي خصائص معينة في تشكيل البيانات المستهدفة ويترك للعينات أن تترشح بشكل عشوائي. ونلجأ لهذا الأسلوب كذلك في الحالات التي يتعذر علينا فهم الخصائص المستهدفة في العينات التي يجب علينا تجميعها لبناء النموذج. العشوائية تضفي فعالية كما ذكرنا بسبب توحيد احتمالية التمثيل لكنها في حد ذاتها ليست مثالية في كل الحالات كما تبينه الصورة التالية.
+<img src="/assets/images/120-icon.jpg" alt="" />
+<br />
+النقاط المضاءة باللون الأخضر تعبر عن عينات محددة عشوائيا بينما المضاءة باللون الأحمر تمثل البيانات التي لم تستخدم في تمثيل العينة. المتجه س والمتجه ص يمكن أن يمثل أي بعد تمثله هذه البيانات. كما تبين الصورة، من المحتمل أن نفقد تمثيل أجزاء مهمة من توزيعة البيانات قد تؤثر على أداء النموذج خصوصاً مع صغر حجم العينة.
+<br /><br />
+من الطرق المستخدمة لتطبيق آلية أخذ عينات عشوائية ما يسمى ب (Reservoir Sampling). هذه الخوارزمية العشوائية تمكننا من اختيار نافذة داخل البيانات من توزيعة البيانات الأساسية عن طريق اختيار أرقام عشوائية كما هو موضح في الصورة التالية:
+<img src="/assets/images/125-icon.png" alt="" />
+<h3> العينات الطبقية </h3>
+من الحلول التي انصح بالاطلاع عليها خصوصاً في تمثيل البيانات لغرض بناء نماذج الآلة أخذ العينات الطبقية. تأخذ العينات الطبقية (Stratified Sampling) قوتها من مفهوم تشكيل مجموعات بيانية ومن ثم أخذ عينات عشوائية من كل مجموعة بشكل متوازن. فهي تتسم بالتصنيف المسبق مع الحفاظ على التحلي بالعشوائية في أخذ العينات من كل مجموعة كما في الصورة التالية.
+<img src="/assets/images/121-icon.jpg" alt="" />
+<h3> عينات المجاميع العشوائية  </h3>
+طريقة (Cluster Random Sampling) تشبه الطريقة الطبقية بإضافة العشوائية في اختيار المجموعة نفسها ويطلق عليها في بعض الكتب العينات العنقودية.
+<br />
+<img src="/assets/images/123-icon.png" alt="" />
+<br />
+الطرق الإحصائية تقترح أسلوبين في التعامل مع هذه الطريقة إما أخذ المجموعة كاملة بكل عيناتها أو العودة للاختيار عينات عشوائية من هذه المجموعات. 
+<h3> الطريقة الممنهجة </h3>
+هناك طرق لأخذ العينات تعتمد على عملية ممنهجة تعتمد على نظام متسلسل في الاختيار.  لإعطاء مثال لتوضيح الفكرة: عند بناء بيانات لتدريب نموذج لتوقع أسعار الأسهم في سوق التداول، فقد يكون من المهم أخذ قراءة أسعار الشركات عند فتح السوق و عند غلق السوق وأخرى تمثل متوسط سعر المضاربة بين فتح و إغلاق السوق. هذه العملية الممنهجة هي في الحقيقة أخذ عينات من أسعار المضاربة في سوق الأسهم بناء على التسلسل الزمني. 
+<br />
+<h3> العينات المبنية على الحصص </h3>
+بعض النماذج يجب أن نعير الاهتمام فيها إلى سياق القرار المتوقع التنبؤ به أو القيم المراد للنموذج أن يتعلمها. على سبيل المثال، هناك نماذج حقيقية انتشر مؤخراً انحيازها لجنس المتقدم للحصول على بطاقة ائتمانية. الشركة اصدرت بطاقات ذات حد ائتماني منخفض لمتقدمة أنثى تحمل نفس العمر و مستوى الدخل لمتقدم آخر رجل. هذا الانجياز يكون مسببه خلل في توازن عناصر مهمة مثل العمر أو الجنس أو المدينة المقيم فيها المتقدم وغيرها. لحل هذه المشكلة، نلجأ لتقسيم البيانات لحصص متسواية من العينات يكون التمثيل فيها متجانساً. مثال آخر، لو أردنا لنموذج أن يتعلم تصنيف رسائل البريد الإلكترونية إلى رسائل مزعجة وغير مزعجة فإن تمثيل العينات يجب أن يكون متجانساً بحيث لا يغلب الغير مزعج منها على الآخر و العكس صحيح.
+<br /><br />
+<h3> إعادة التوازن </h3>
+في مجال تعلم الآلة نتعامل مع اختلال التوازن الذي تمثله العينات بطريقتين: الأولى خفض التمثيل (Undersampling) والأخرى رفع التمثيل (Oversampling) كما في الصورة التالية:
+<br />
+<img src="/assets/images/124-icon.png" alt="" />
+<br /><br />
+<h1> توزيع العينات أثناء بناء النموذج </h1>
+كما ذكرت في بداية هذا المقال، الحديث عن أخذ العينات لبيانات التدريب وتوزيعها لمجموعات لكل مرحلة في قناة بناء النموذج هي الحاجة الأكثر شيوعاً لحاجتنا لأخذ العينات. قبل أن نتطرق للتفاصيل يجب أن أوضح أن كل الطرق السابقة تأتي في تمثيل البيانات قبل هذه الخطوة وأن تقسيم البيانات لبيانات للتدريب (Training Set)، أو التحقق من التعلم(Validation Set)، أو اختبار النموذج (Testing Set) هي بعد الوصول لتمثيل بياني مناسب للتعلم الآلي بالإجمال.
+<br /><br />
+يتم تقسيم البيانات لأغراض التدريب لمجموعتين تشكل بيانات التدريب فيها ٨٠٪ من مجمل عدد العينات و يستخدم ٢٠٪ المتبقية لأغراض اختبار أداء النموذج.  ثم يعاد تقسيم بيانات التدريب باستخدام نفس القاعدة (٨٠-٢٠) لنحصل على مجموعتين: مجموعة المدخلات للتدريب ومجموعة التحقق والتي تعتمد عليها الخوارزميات في تتبع مراحل تعلم النموذج و كذلك في ضبط معاملات النموذج. 
+<br /><br />
+لكن الاكتفاء بهذا التقسيم غير كافٍ، ذلك يعود للأسباب التالية: أولاً احتمالية أن توزيع البيانات العشوائي سبب بمصادفة مكنت النموذج من بذل أداء تنبؤ عالي جداً يختلف عن إعادة تجربة التدريب و الاختبار. و السبب الآخر أن عدد العينات المستخدمة غير كاف لتعلم النموذج. وفي هذه الحالتين نلجأ لما يسمى ب (k‪-‬fold). مفهوم (k-fold) يتيح لنا تقسيم المجاميع إلى عدد (k) بحيث أن كل مجموعة من هذه المجاميع  تستخدم للتحقق و يعاد المتبقي للتدريب و تعاد الكرة مجموعة أخرى للتحقق لا تتقاطع مع سابقتها و يستخدم المتبقي في التدريب وهكذا.
+
+<br /><br />
+وفي الختام أريد أن أنوه أن الطرق الإحصائية تزخر بالعديد من الأساليب العلمية المتبعة لأخذ العينات بطريقة غير عشوائية كالعينات العرضية أو العينات القصدية التي تهتم بشريحة معينة من البيانات و غيرها. لا شك بأهمية هذه الأساليب بحثياً في حالات مختلفة لكن استخدامها محدود في مجال تعلم الآلة نظراً لاننا دائماً ما نبحث عن تمثيل حقيقي للبيانات من خلال أخذ العينات يتسم بالشمولية.
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-05-09T00:00:00-04:00">May 09, 2020</time></p>
+        
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/numpy_vs_numba/" class="pagination--pager" title="فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+          <li><a href="https://github.com/malhamid" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Mohammed Alhamid. 
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js" integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
