@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-13T23:40:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;مقدمة في ترميز النصوص&lt;/div&gt;" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-14T12:43:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;مقدمة في ترميز النصوص&lt;/div&gt;" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;&lt;a href=&quot;https://unsplash.com/@anniespratt&quot;&gt;Photo by Annie Spratt on Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
@@ -207,8 +207,47 @@ with open(&quot;models/glove.6B.50d.txt&quot;, &quot;r&quot;) as file:
  'author',
  'titled',
  'published']‫.‬
+الصورة التالية توضح المتجهات المتقاربة لحد ١٠٠ كلمة لكل متجه.
+&lt;img src=&quot;/assets/images/135-icon.png&quot; alt=&quot;&quot; /&gt;
+&lt;br /&gt;
+الرسم البياني في الصورة السابقة مبني على حساب الفرق بين المسافة بين المتجهات. هناك عمليات رياضية مختلفة تُستخدم لحساب العلاقة بين المتجهات. الأكواد التالية تحسب العلاقة بين المتجهات باستخدام (Euclidean) أو (Cosine Similarity).
+&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Example 1 
+x = embeddings_dict['book']
+y = embeddings_dict['notebook']
+math.sqrt(sum([(a - b) ** 2 for a, b in zip(x, y)]))
+---
+5.506975291916892
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Example 2
+x = embeddings_dict['book']
+y = embeddings_dict['notebook']
+spatial.distance.cosine(x,y)
+---
+0.6004519462585449 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;/div&gt;</content><author><name>Mohammed Alhamid</name></author><summary type="html"></summary></entry><entry><title type="html">تعلم الآلة ‫-‬ أساليب أخذ العينات</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;تعلم الآلة ‫-‬ أساليب أخذ العينات&lt;/div&gt;" /><published>2020-05-09T00:00:00-04:00</published><updated>2020-05-09T00:00:00-04:00</updated><id>http://localhost:4000/data-sampling</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/119-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
+&lt;h2&gt; تحديات حول ترميز النصوص &lt;/h2&gt;
+&lt;h4&gt; الحفاظ على الترتيب &lt;/h4&gt;
+الترميز باستخدام المتجهات يستند على فهرس الكلمات الموجودة في القاموس وكما تطرقنا في المثال بداية المقال أن الترتيب في الترميز الساخن يفقدنا الحفاظ على ترتيب الكلمات في الجملة.  هناك حلول مكلفة لحل هذه المشكلة عن طريق بناء متجهات تعبر عن الجملة الواحدة بدلاً من متجه واحد لكل جملة. اختيار الترميز المناسب في هذه الحالة يعود للنموذج الذي سيتعلم من هذه النصوص فبعض النماذج بامكانها تحقيق أداء مقبول دون الحاجة للاكتراث بالترتيب.
+&lt;h4&gt; طول المتجهات &lt;/h4&gt;
+ترميز المستندات باستخدام الفهرس مكلف إذا ما زاد عدد المفردات المميزة في المستند. زيادة هذ الأطوال ينتج عنه تمثيل معقد و متناثر لهذه المتجهات.
+&lt;h4&gt; التحيز و فقدان الكلمات &lt;/h4&gt;
+النصوص تحمل معان تعبيرية يسهل على الانسان ادراكها من النص كمعرفة لمن يعود إليه الضمير الغائب  أو الضمير المتصل وغيرها من التحديات التي تفقد إدراكها نماذج تعلم الآلة. سرعان ما تنحاز هذه الضمائر لجنس معين في الخطاب إذا ماوجد هذا الانحياز طريقه في البيانات التي تم استخدامها لتدريب النموذج. لنأخذ مثالاً لتوضيح الفكرة. 
+&lt;img src=&quot;/assets/images/136-icon.png&quot; alt=&quot;&quot; /&gt;
+&lt;br /&gt;
+النموذج كان منحازاً لتضمين (&quot;مسن&quot; أو &quot;قديم&quot;) لكلمة &quot;رجل&quot; وكانت الثانية من التشابه بينما كلمة &quot;ثمين&quot; كانت ضمنياً أقرب لكلمة &quot;رخيص&quot;.
+&lt;br /&gt;&lt;br /&gt;
+جميع الأكواد المستخدمة في هذه المقالة متوفر على مستودع البيانات على هذا
+‪&lt;a href=&quot;https://github.com/malhamid/Text-Feature-Extraction/blob/master/text-encoding.ipynb&quot;&gt;‬ الرابط‫.‬&lt;/a&gt;
+&lt;h2&gt; المراجع &lt;/h2&gt;
+&lt;/div&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://nlp.stanford.edu/projects/glove/&quot;&gt;Global Vectors for Word Representation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Mohammed Alhamid</name></author><summary type="html"></summary></entry><entry><title type="html">تعلم الآلة ‫-‬ أساليب أخذ العينات</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;تعلم الآلة ‫-‬ أساليب أخذ العينات&lt;/div&gt;" /><published>2020-05-09T00:00:00-04:00</published><updated>2020-05-09T00:00:00-04:00</updated><id>http://localhost:4000/data-sampling</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/119-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;&lt;a href=&quot;https://unsplash.com/@impatrickt&quot;&gt;Photo by Luke Chesser on Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
