@@ -1,6 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-14T14:40:35-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;مقدمة في ترميز النصوص&lt;/div&gt;" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;small&gt;&lt;a href=&quot;https://unsplash.com/@anniespratt&quot;&gt;Photo by Annie Spratt on Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-14T16:40:03-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;مقدمة في ترميز النصوص&lt;/div&gt;" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
 كما هو من البديهي، فإن الآلة لا تتعامل مع النصوص بحروفها وأفعالها وأسمائها وأنه يتوجب علينا تحويل هذه النصوص لمعاملات رقمية يمكن للآلة أن تبني خوارزمياتها عليها. بناءً على ذلك، كيف للآلة أن تتعلم أن نصاً معيناً يحمل صفةً إيجابية مثلاً أو سلبية؟ كيف لمحركات البحث أن تفهم عن ماذا نبحث عند ادخالنا لمجموعة من النصوص في حقل الادخال. كل ذلك مبني على مفهوم بسيط يطلق عليه الترميز. 
@@ -179,6 +177,8 @@ print(tok.texts_to_matrix(corpus, mode='tfidf'))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
+الرسم التفاعلي التالي يرسم بشكل مقتطع طريقة بناء هذا النموذج حيث تُبنى شبكة عصبية من طبقة مخفية واحدة. هذا النموذج يُمكننا بسهولة مقارنة المفردات عن طريق تعلم التفاعل الضمني المتوفر من خلال النص المدخل. 
+&lt;img src=&quot;/assets/images/138-icon.gif&quot; alt=&quot;&quot; /&gt;
 بناء النموذج على عدد قليل من الكلمات ليس ذو قيمة، وذلك نظراً لعدم كفاية النصوص التي تمكن النموذج من تنبؤ المسافات بين كل متجه كما توضحه الصورة التالية. كما أن بناء نماذج Word2Vec مكلفة وتستغرق مساحة من الوقت و الذاكرة العشوائية عند البناء. وفي كثير من الأحيان، نلحظ أن بناء نموذج Word2Vec على قاعدة بيانات صغيرة سرعان ما ينتج عنه نموذجاً يكون مضاعفاً لحجم البيانات الأساسي. وعليه بالامكان استخدام نماذج تم تدريبها مسبقاً على بيانات أصغر بالحجم و حققت دقة عالية في بناء المتجهات الضمنية للكلمات. 
 &lt;img src=&quot;/assets/images/137-icon.png&quot; alt=&quot;&quot; /&gt;
 &lt;br /&gt;&lt;br /&gt;
@@ -242,7 +242,7 @@ spatial.distance.cosine(x,y)
 &lt;br /&gt;
 النموذج كان منحازاً لتضمين (&quot;مسن&quot; أو &quot;قديم&quot;) لكلمة &quot;رجل&quot; وكانت الثانية من التشابه بينما كلمة &quot;ثمين&quot; كانت ضمنياً أقرب لكلمة &quot;رخيص&quot;.
 &lt;br /&gt;&lt;br /&gt;
-جميع الأكواد المستخدمة في هذه المقالة متوفر على مستودع البيانات على هذا
+جميع الأكواد المستخدمة في هذه المقالة متوفرة على مستودع البيانات على هذا
 ‪&lt;a href=&quot;https://github.com/malhamid/Text-Feature-Extraction/blob/master/text-encoding.ipynb&quot;&gt;‬ الرابط‫.‬&lt;/a&gt;
 &lt;h2&gt; المراجع &lt;/h2&gt;
 &lt;/div&gt;
