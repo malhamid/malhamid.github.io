@@ -72,10 +72,10 @@ permalink: /data_sampling/
 	    ks_tokens[i] = [w for w in pd.Series(ks_tokens[i]) if not w in stop_words]
 
 <div style="direction: rtl; text-align: right;">
-من أمثلة الكلمات المستبعدة الكلمات التالية: ['on', 'other', 'of', 'him', 'didn', 'have', 'haven', 'or', 'won', 'couldn']. نتاج هذه الخطوة على متجه الكلمات للجملة الأولى توضحه الصورة التالية:
+من أمثلة الكلمات المستبعدة، الكلمات التالية: ['on', 'other', 'of', 'him', 'didn', 'have', 'haven', 'or', 'won', 'couldn']. نتاج هذه الخطوة على متجه الكلمات للجملة الأولى توضحه الصورة التالية:
 <img src="/assets/images/128-icon.png" alt="">
 <br/>
-الخطوة التالية هي استعادة جذور الكلمات و سننفذ هذه الخطوة على النصوص الانجليزية باستخدام خوارزمية (Porter) على النحو التالي: 
+يتطلب علينا الآن استعادة جذور الكلمات و سننفذ هذه الخطوة على النصوص الانجليزية باستخدام خوارزمية (Porter) على النحو التالي: 
 </div>
 	# We will use Porter algorithm to reduce the words. Porter has 5 phases of word reductions: 
 	from nltk.stem.porter import PorterStemmer
@@ -94,6 +94,7 @@ permalink: /data_sampling/
 
 أصبح المتجه المستخلص من الجملة الأولى من النص بهذا الشكل: 
 <img src="/assets/images/129-icon.png" alt="">
+<br/>
 الأكواد التالية ستعمل على إزالة الأرقام و علامات الترقيم و الأحرف الخاصة كما تقدم: 
 </div>
 	for i in range(0, len(ks_tokens)):
@@ -105,7 +106,7 @@ permalink: /data_sampling/
 	    ks_tokens[i] = new_ks_tokens
 <div style="direction: rtl; text-align: right;">
 <br/>
-وهكذا يصبح شكل المتجه النهائي بهذ الشكل: 
+وهكذا يصبح شكل المتجه النهائي بعد تهيئة هذه النصوص على هذا النحو: 
 <img src="/assets/images/130-icon.png" alt="">
 <h2>ترميز النصوص</h2>
 
@@ -125,8 +126,9 @@ permalink: /data_sampling/
 
 <img src="/assets/images/131-icon.png" alt="">
 <div style="direction: rtl; text-align: right;">
+نستطلع فيما تبقى من هذه المقالة، طرق الترميز لمتجهات الكلمات بعد تنقيحها و معالجتها.
 <h3>الترميز الساخن </h3>
-يقصد بالترميز الساخن بناء متجهات تحمل جميع المفردات الموجودة في القاموس النصي المدخل ويكون حجم المتجه مساو لعدد الكلمات المستخرجة. يحتوي عناصر كل متجه على قيم تساوي الصفر أو الواحد. عدد المتجهات يساوي عدد الجمل النصية المدخلة. سمي بالساخن نظراً أنه يشغل العناصر التي تظهر في الجملة بقيمة ١ عند ظهورة الكلمة كما في المثال التالي:
+يقصد بالترميز الساخن بناء متجهات تحمل جميع المفردات الموجودة في القاموس النصي المدخل ويكون حجم المتجه مساو لعدد الكلمات المستخرجة. يحتوي عناصر كل متجه على قيم تساوي الصفر أو الواحد. عدد المتجهات يساوي عدد الجمل النصية المدخلة. سمي بالساخن نظراً أنه يشغل العناصر التي تظهر في الجملة بقيمة ١ عند ظهور الكلمة كما في المثال التالي:
 </div>
 	print(tok.texts_to_matrix(corpus, mode='binary'))
 
@@ -163,3 +165,40 @@ permalink: /data_sampling/
 	# approach option
 	import multiprocessing
 cores = multiprocessing.cpu_count()
+
+	# Parameters
+	# size (int, optional) – Dimensionality of the word vectors.
+	# window (int, optional) – Maximum distance between the current and predicted word within a sentence.
+	# min_count (int, optional) – Ignores all words with total frequency lower than this.
+	# workers (int, optional) – Use these many worker threads to train the model (=faster training with 	multicore machines).
+	model = gensim.models.Word2Vec (ks_tokens, window=10, size=150, min_count=1,workers=10)
+
+<div style="direction: rtl; text-align: right;">
+بناء النموذج على عدد قليل من الكلمات ليس ذو قيمة، وذلك نظراً لعدم كفاية النصوص التي تمكن النموذج من تنبؤ المسافات بين كل متجه. كما أن بناء نماذج Word2Vec مكلفة وتستغرق مساحة من الوقت و الذاكرة العشوائية عند البناء. وفي كثير من الأحيان، نلحظ أن بناء نموذج Word2Vec على قاعدة بيانات صغيرة سرعان ما ينتج عنه نموذجاً يكون مضاعفاً لحجم البيانات الأساسي. وعليه بالامكان استخدام نماذج تم تدريبها مسبقاً على بيانات أصغر بالحجم و حققت دقة عالية في بناء المتجهات الضمنية للكلمات. 
+<br/><br/>
+سنستخدم نموذج GloVe وهي خوارزمية تم تدريبها على نصوص من موسوعة وكيبيديا و متوفرة من جامعة ستانفورد على هذا <a href="https://nlp.stanford.edu/data/glove.6B.zip"> الرابط </a>. الأكواد التالية ستعمل على تحميل النموذج واستخدامه.
+</div>
+	import numpy as np
+	from scipy import spatial
+
+	embeddings_dict = {}
+	with open("models/glove.6B.50d.txt", "r") as file:
+	    for line in file: 
+	        values = line.split()
+	        word = values[0]
+	        vector = np.asarray(values[1:], "float32")
+	        embeddings_dict[word] = vector
+
+<div style="direction: rtl; text-align: right;">
+لو سألنا النموذج ماهي الكلمات القريبة من الكلمة (‪'‬book‪'‬) فستكون الاجابة مقاربة للتالي: 
+['book',
+ 'books',
+ 'story',
+ 'biography',
+ 'novel',
+ 'writing',
+ 'wrote',
+ 'author',
+ 'titled',
+ 'published']‫.‬
+

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-13T23:03:45-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;مقدمة في ترميز النصوص&lt;/div&gt;" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-13T23:40:46-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;مقدمة في ترميز النصوص&lt;/div&gt;" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;&lt;a href=&quot;https://unsplash.com/@anniespratt&quot;&gt;Photo by Annie Spratt on Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
@@ -69,10 +69,10 @@ for i in range(0, len(ks_tokens)):
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
-من أمثلة الكلمات المستبعدة الكلمات التالية: ['on', 'other', 'of', 'him', 'didn', 'have', 'haven', 'or', 'won', 'couldn']. نتاج هذه الخطوة على متجه الكلمات للجملة الأولى توضحه الصورة التالية:
+من أمثلة الكلمات المستبعدة، الكلمات التالية: ['on', 'other', 'of', 'him', 'didn', 'have', 'haven', 'or', 'won', 'couldn']. نتاج هذه الخطوة على متجه الكلمات للجملة الأولى توضحه الصورة التالية:
 &lt;img src=&quot;/assets/images/128-icon.png&quot; alt=&quot;&quot; /&gt;
 &lt;br /&gt;
-الخطوة التالية هي استعادة جذور الكلمات و سننفذ هذه الخطوة على النصوص الانجليزية باستخدام خوارزمية (Porter) على النحو التالي: 
+يتطلب علينا الآن استعادة جذور الكلمات و سننفذ هذه الخطوة على النصوص الانجليزية باستخدام خوارزمية (Porter) على النحو التالي: 
 &lt;/div&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# We will use Porter algorithm to reduce the words. Porter has 5 phases of word reductions: 
 from nltk.stem.porter import PorterStemmer
@@ -93,6 +93,7 @@ porter = PorterStemmer()
 
 أصبح المتجه المستخلص من الجملة الأولى من النص بهذا الشكل: 
 &lt;img src=&quot;/assets/images/129-icon.png&quot; alt=&quot;&quot; /&gt;
+&lt;br /&gt;
 الأكواد التالية ستعمل على إزالة الأرقام و علامات الترقيم و الأحرف الخاصة كما تقدم: 
 &lt;/div&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for i in range(0, len(ks_tokens)):
@@ -105,7 +106,7 @@ porter = PorterStemmer()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
 &lt;br /&gt;
-وهكذا يصبح شكل المتجه النهائي بهذ الشكل: 
+وهكذا يصبح شكل المتجه النهائي بعد تهيئة هذه النصوص على هذا النحو: 
 &lt;img src=&quot;/assets/images/130-icon.png&quot; alt=&quot;&quot; /&gt;
 &lt;h2&gt;ترميز النصوص&lt;/h2&gt;
 
@@ -127,8 +128,9 @@ print(tok.word_counts)
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/131-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
+نستطلع فيما تبقى من هذه المقالة، طرق الترميز لمتجهات الكلمات بعد تنقيحها و معالجتها.
 &lt;h3&gt;الترميز الساخن &lt;/h3&gt;
-يقصد بالترميز الساخن بناء متجهات تحمل جميع المفردات الموجودة في القاموس النصي المدخل ويكون حجم المتجه مساو لعدد الكلمات المستخرجة. يحتوي عناصر كل متجه على قيم تساوي الصفر أو الواحد. عدد المتجهات يساوي عدد الجمل النصية المدخلة. سمي بالساخن نظراً أنه يشغل العناصر التي تظهر في الجملة بقيمة ١ عند ظهورة الكلمة كما في المثال التالي:
+يقصد بالترميز الساخن بناء متجهات تحمل جميع المفردات الموجودة في القاموس النصي المدخل ويكون حجم المتجه مساو لعدد الكلمات المستخرجة. يحتوي عناصر كل متجه على قيم تساوي الصفر أو الواحد. عدد المتجهات يساوي عدد الجمل النصية المدخلة. سمي بالساخن نظراً أنه يشغل العناصر التي تظهر في الجملة بقيمة ١ عند ظهور الكلمة كما في المثال التالي:
 &lt;/div&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print(tok.texts_to_matrix(corpus, mode='binary'))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -161,13 +163,52 @@ print(tok.texts_to_matrix(corpus, mode='tfidf'))
 &lt;br /&gt;&lt;br /&gt;
 يوجد نموذجان واسعا الانتشار الأول Word2Vec و الآخر GloVe. لبناء نموذج محاكي لطريقة بناء متجهات Word2Vec نحتاج المكتبات التالية للتسهيل:
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import gensim 
-from gensim.models import Word2Vec
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gensim&lt;/span&gt; 
+&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gensim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;models&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Word2Vec&lt;/span&gt;
 
-# Building a word2vec model typically is very expensive, so we need to keep in mind the multiprocessing 
-# approach option
-import multiprocessing cores = multiprocessing.cpu_count()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Mohammed Alhamid</name></author><summary type="html"></summary></entry><entry><title type="html">تعلم الآلة ‫-‬ أساليب أخذ العينات</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;تعلم الآلة ‫-‬ أساليب أخذ العينات&lt;/div&gt;" /><published>2020-05-09T00:00:00-04:00</published><updated>2020-05-09T00:00:00-04:00</updated><id>http://localhost:4000/data-sampling</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/119-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Building&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word2vec&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;typically&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;very&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expensive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;so&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;we&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;need&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keep&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mind&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt; 
+&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;approach&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;option&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cores&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Parameters&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dimensionality&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vectors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Maximum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;between&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;predicted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;within&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min_count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ignores&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frequency&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;than&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;workers&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Use&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;these&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;many&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;worker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;faster&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;training&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; 	&lt;span class=&quot;n&quot;&gt;multicore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;machines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gensim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Word2Vec&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ks_tokens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;workers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
+بناء النموذج على عدد قليل من الكلمات ليس ذو قيمة، وذلك نظراً لعدم كفاية النصوص التي تمكن النموذج من تنبؤ المسافات بين كل متجه. كما أن بناء نماذج Word2Vec مكلفة وتستغرق مساحة من الوقت و الذاكرة العشوائية عند البناء. وفي كثير من الأحيان، نلحظ أن بناء نموذج Word2Vec على قاعدة بيانات صغيرة سرعان ما ينتج عنه نموذجاً يكون مضاعفاً لحجم البيانات الأساسي. وعليه بالامكان استخدام نماذج تم تدريبها مسبقاً على بيانات أصغر بالحجم و حققت دقة عالية في بناء المتجهات الضمنية للكلمات. 
+&lt;br /&gt;&lt;br /&gt;
+سنستخدم نموذج GloVe وهي خوارزمية تم تدريبها على نصوص من موسوعة وكيبيديا و متوفرة من جامعة ستانفورد على هذا &lt;a href=&quot;https://nlp.stanford.edu/data/glove.6B.zip&quot;&gt; الرابط &lt;/a&gt;. الأكواد التالية ستعمل على تحميل النموذج واستخدامه.
+&lt;/div&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+from scipy import spatial
+
+embeddings_dict = {}
+with open(&quot;models/glove.6B.50d.txt&quot;, &quot;r&quot;) as file:
+    for line in file: 
+        values = line.split()
+        word = values[0]
+        vector = np.asarray(values[1:], &quot;float32&quot;)
+        embeddings_dict[word] = vector
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
+لو سألنا النموذج ماهي الكلمات القريبة من الكلمة (‪'‬book‪'‬) فستكون الاجابة مقاربة للتالي: 
+['book',
+ 'books',
+ 'story',
+ 'biography',
+ 'novel',
+ 'writing',
+ 'wrote',
+ 'author',
+ 'titled',
+ 'published']‫.‬
+
+&lt;/div&gt;</content><author><name>Mohammed Alhamid</name></author><summary type="html"></summary></entry><entry><title type="html">تعلم الآلة ‫-‬ أساليب أخذ العينات</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;تعلم الآلة ‫-‬ أساليب أخذ العينات&lt;/div&gt;" /><published>2020-05-09T00:00:00-04:00</published><updated>2020-05-09T00:00:00-04:00</updated><id>http://localhost:4000/data-sampling</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/119-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;&lt;a href=&quot;https://unsplash.com/@impatrickt&quot;&gt;Photo by Luke Chesser on Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
