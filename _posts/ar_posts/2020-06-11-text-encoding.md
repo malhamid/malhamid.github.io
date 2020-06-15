@@ -2,7 +2,7 @@
 title: <div class="col-md-6 text-right">مقدمة في ترميز النصوص</div>
 dir: rtl
 layout: single_ar
-permalink: /data_sampling/
+permalink: /into_text_encoding/
 ---
 <img src="/assets/images/126-icon.png" alt="">
 
