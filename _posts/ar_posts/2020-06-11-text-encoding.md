@@ -238,8 +238,9 @@ cores = multiprocessing.cpu_count()
 <br/>
 نماذج التضمين التي استخدمناها تكون عاجزة تماماً عن وجود كلمة جديدة لم يسبق للنموذج التعرف عليها. النموذج سيلوح بخطأ برمجي في حال كانت الكلمات المدخلة جديدة على قاموس النموذج. 
 <br/><br/>
-جميع الأكواد المستخدمة في هذه المقالة متوفرة على مستودع البيانات على هذا
+سنكمل باذن الله مجالات استخدام النصوص في تعلم الآلة في مقالات قادمة. جميع الأكواد المستخدمة في هذه المقالة متوفرة على مستودع البيانات على هذا
 ‪<a href="https://github.com/malhamid/Text-Feature-Extraction/blob/master/text-encoding.ipynb">‬ الرابط‫.‬</a>
-<h2> المراجع </h2>
+كما يمكن الاطلاع على كيفية تصنيف النصوص حسب المشاعر في مثال تحدثنا عنه سابقاً على هذا
+<a href="https://github.com/malhamid/SentimentAnalysis"> الرابط.</a><h2> المراجع </h2>
 </div>
 - <a href="https://nlp.stanford.edu/projects/glove/">Global Vectors for Word Representation</a>

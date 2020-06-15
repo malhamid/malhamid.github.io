@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-14T20:16:12-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;مقدمة في ترميز النصوص&lt;/div&gt;" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-06-14T22:25:42-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;مقدمة في ترميز النصوص&lt;/div&gt;" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
 كما هو من البديهي، فإن الآلة لا تتعامل مع النصوص بحروفها وأفعالها وأسمائها وأنه يتوجب علينا تحويل هذه النصوص لمعاملات رقمية يمكن للآلة أن تبني خوارزمياتها عليها. بناءً على ذلك، كيف للآلة أن تتعلم أن نصاً معيناً يحمل صفةً إيجابية مثلاً أو سلبية؟ كيف لمحركات البحث أن تفهم عن ماذا نبحث عند ادخالنا لمجموعة من النصوص في حقل الادخال. كل ذلك مبني على مفهوم بسيط يطلق عليه الترميز. 
@@ -244,9 +244,10 @@ spatial.distance.cosine(x,y)
 &lt;br /&gt;
 نماذج التضمين التي استخدمناها تكون عاجزة تماماً عن وجود كلمة جديدة لم يسبق للنموذج التعرف عليها. النموذج سيلوح بخطأ برمجي في حال كانت الكلمات المدخلة جديدة على قاموس النموذج. 
 &lt;br /&gt;&lt;br /&gt;
-جميع الأكواد المستخدمة في هذه المقالة متوفرة على مستودع البيانات على هذا
+سنكمل باذن الله مجالات استخدام النصوص في تعلم الآلة في مقالات قادمة. جميع الأكواد المستخدمة في هذه المقالة متوفرة على مستودع البيانات على هذا
 ‪&lt;a href=&quot;https://github.com/malhamid/Text-Feature-Extraction/blob/master/text-encoding.ipynb&quot;&gt;‬ الرابط‫.‬&lt;/a&gt;
-&lt;h2&gt; المراجع &lt;/h2&gt;
+كما يمكن الاطلاع على كيفية تصنيف النصوص حسب المشاعر في مثال تحدثنا عنه سابقاً على هذا
+&lt;a href=&quot;https://github.com/malhamid/SentimentAnalysis&quot;&gt; الرابط.&lt;/a&gt;&lt;h2&gt; المراجع &lt;/h2&gt;
 &lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://nlp.stanford.edu/projects/glove/&quot;&gt;Global Vectors for Word Representation&lt;/a&gt;&lt;/li&gt;
