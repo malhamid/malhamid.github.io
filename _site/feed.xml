@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.7">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-01-01T23:19:46-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/into_text_encoding/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;مقدمة في ترميز النصوص&lt;/div&gt;" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/into_text_encoding/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-05-20T09:17:40-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">AI and Machine Learning Blog</title><subtitle>All about AI and Machine Learning..</subtitle><author><name>Mohammed Alhamid</name></author><entry><title type="html">مقدمة في ترميز النصوص</title><link href="http://localhost:4000/into_text_encoding/" rel="alternate" type="text/html" title="مقدمة في ترميز النصوص" /><published>2020-06-11T00:00:00-04:00</published><updated>2020-06-11T00:00:00-04:00</updated><id>http://localhost:4000/text-encoding</id><content type="html" xml:base="http://localhost:4000/into_text_encoding/">&lt;p&gt;&lt;img src=&quot;/assets/images/126-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
 كما هو من البديهي، فإن الآلة لا تتعامل مع النصوص بحروفها وأفعالها وأسمائها وأنه يتوجب علينا تحويل هذه النصوص لمعاملات رقمية يمكن للآلة أن تبني خوارزمياتها عليها. بناءً على ذلك، كيف للآلة أن تتعلم أن نصاً معيناً يحمل صفةً إيجابية مثلاً أو سلبية؟ كيف لمحركات البحث أن تفهم عن ماذا نبحث عند ادخالنا لمجموعة من النصوص في حقل الادخال. كل ذلك مبني على مفهوم بسيط يطلق عليه الترميز. 
@@ -8,7 +8,7 @@
 التقنيات المستخدمة اليوم لترميز النصوص ليست بالمعقدة إطلاقاً وسنستعرض سوية مجموعة منها مع الأمثلة باستخدام لغة بايثون، بالتفصيل. سنستخدم في هذا الشرح مجموعة من النصوص استخرجت من موسوعة ويكيبيديا تتكلم عن عدد الأشجار الموجودة حول العالم.
 &lt;br /&gt;&lt;br /&gt;
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;corpus = [
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;corpus = [
 	&quot;The number of trees in the world, according to a 2015 estimate, is 3.04 trillion.&quot;,
 	&quot;46% of the trees in the world are in the tropics or sub-tropics.&quot;,
 	&quot;20% of the trees in the world are in the temperate zones.&quot;,
@@ -32,7 +32,7 @@
 يمكن استخراج الكلمات باستخدام الأكواد المذيلة بالأسفل مع العلم أن مكتبة (Keras) تقدم واجهات (API) تقوم بهذه 
 العملية.
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Extracting the tokens using NLTK
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Extracting the tokens using NLTK
 # We need to serialize the text to splits the works into tokens
 nltk_tokens = [] 
 for text in corpus:
@@ -43,7 +43,7 @@ print(nltk_tokens)
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
 وهنا باستخدام المكتبة: 
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Extracting the tokens using Keras
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Extracting the tokens using Keras
 ks_tokens = []
 for text in corpus: 
     ks_tokens.append(keras_text_to_word_sequence(text))
@@ -58,7 +58,7 @@ print(ks_tokens)
 تهيئة الكلمات تشمل الخطوات التي ذكرناها سابقاً والتي تشمل إزالة المستبعدات و استعادة جذور الكلمات و إزالة علامات الترقيم و الأحرف الخاصة و الرموز المكونة من حرف واحد. 
 بالامكان تحميل الكلمات المستبعدة في اللغة الانجليزية من المكتبة الأكثر شيوعاً في معالجة اللغة الطبيعية (nltk) على النحو التالي:
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from nltk.corpus import stopwords
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from nltk.corpus import stopwords
 # Retriving the stop words from the library 
 stop_words = set(stopwords.words('english'))
 
@@ -72,7 +72,7 @@ for i in range(0, len(ks_tokens)):
 &lt;br /&gt;
 يتطلب علينا الآن استعادة جذور الكلمات و سننفذ هذه الخطوة على النصوص الانجليزية باستخدام خوارزمية (Porter) على النحو التالي: 
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# We will use Porter algorithm to reduce the words. Porter has 5 phases of word reductions: 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# We will use Porter algorithm to reduce the words. Porter has 5 phases of word reductions: 
 from nltk.stem.porter import PorterStemmer
 porter = PorterStemmer()
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -82,7 +82,7 @@ porter = PorterStemmer()
 علينا الآن المرور على الكلمات المستخرجة و استعادة جذورها: 
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for tokens in ks_tokens:
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for tokens in ks_tokens:
     for i in range(0, len(tokens)):    
         tokens[i] = porter.stem(tokens[i])
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -94,7 +94,7 @@ porter = PorterStemmer()
 &lt;br /&gt;
 الأكواد التالية ستعمل على إزالة الأرقام و علامات الترقيم و الأحرف الخاصة كما تقدم: 
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for i in range(0, len(ks_tokens)):
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;for i in range(0, len(ks_tokens)):
     new_ks_tokens = []
     for tok in ks_tokens[i]: 
         tok = tok.translate(str.maketrans('', '', string.punctuation))
@@ -110,7 +110,7 @@ porter = PorterStemmer()
 
 تحتوي الخطوات السابقة على العديد من الحلقات المتكررة ويمكن بسهولة أن تكون مكلفة للغاية خصوصاً إذا زاد عدد الكلمات بشكل كبير. وبالتالي ، سوف نكرر الخطوات السابقة باستخدام أسطر قليلة من التعليمات البرمجية باستخدام مكتبة (Keras):
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from keras.preprocessing.text import Tokenizer
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from keras.preprocessing.text import Tokenizer
 # First step is to get an instance of the tokenizer class
 tok = Tokenizer()
 # Keras can fit our corpus in a single call
@@ -119,7 +119,7 @@ tok.fit_on_texts(corpus)
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
 بالامكان الآن استطلاع تردد كل كلمة في المتجهات و عدد تكرارها في كل جملة على النحو التالي: 
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Let's explore what is the content of the tokenized corpus
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Let's explore what is the content of the tokenized corpus
 print('The frequency of each word in the corpus:')
 print(tok.word_counts)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -130,7 +130,7 @@ print(tok.word_counts)
 &lt;h3&gt;الترميز الساخن &lt;/h3&gt;
 يقصد بالترميز الساخن بناء متجهات تحمل جميع المفردات الموجودة في القاموس النصي المدخل ويكون حجم المتجه مساو لعدد الكلمات المستخرجة. يحتوي عناصر كل متجه على قيم تساوي الصفر أو الواحد. عدد المتجهات يساوي عدد الجمل النصية المدخلة. سمي بالساخن نظراً أنه يشغل العناصر التي تظهر في الجملة بقيمة ١ عند ظهور الكلمة كما في المثال التالي:
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print(tok.texts_to_matrix(corpus, mode='binary'))
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;print(tok.texts_to_matrix(corpus, mode='binary'))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/images/132-icon.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
@@ -141,7 +141,7 @@ print(tok.word_counts)
 &lt;h3&gt; الترميز العددي &lt;/h3&gt;
 هذا النوع من الترميز مشابه لسابقه إلا أنه عوضاً عن استخدام القيمة ١، نستخدم تردد الكلمة في نفس الجملة.
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Encoding the frequency of each word in the sentence
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Encoding the frequency of each word in the sentence
 print(tok.texts_to_matrix(corpus, mode='count'))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -149,7 +149,7 @@ print(tok.texts_to_matrix(corpus, mode='count'))
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
 يستخدم لوصف هذا النوع من الترميز مصطلح ([Frequency-based vectorization) وهناك طرق مشابهة للترميز العددي أو الترددي أشهرها (TF‪-‬IDF). ويمكن حساب الترميز بهذه الطريقة بناء على عدد الظهور لكلمة معينة على اجمالي عدد الكلمات في المستند. 
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Encoding the frequency of each word in the sentence (TFIDF)
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Encoding the frequency of each word in the sentence (TFIDF)
 print(tok.texts_to_matrix(corpus, mode='tfidf'))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -161,19 +161,19 @@ print(tok.texts_to_matrix(corpus, mode='tfidf'))
 &lt;br /&gt;&lt;br /&gt;
 يوجد نموذجان واسعا الانتشار الأول Word2Vec و الآخر GloVe. لبناء نموذج محاكي لطريقة بناء متجهات Word2Vec نحتاج المكتبات التالية للتسهيل:
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gensim&lt;/span&gt; 
-&lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gensim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;models&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Word2Vec&lt;/span&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import gensim 
+from gensim.models import Word2Vec
 
-&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Building&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word2vec&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;typically&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;very&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;expensive&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;so&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;we&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;need&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;keep&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mind&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt; 
-&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;approach&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;option&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;cores&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;multiprocessing&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cpu_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+# Building a word2vec model typically is very expensive, so we need to keep in mind the multiprocessing 
+# approach option
+import multiprocessing cores = multiprocessing.cpu_count()
 
-&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;Parameters&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dimensionality&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;of&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vectors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Maximum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;distance&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;between&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;predicted&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;word&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;within&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sentence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min_count&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ignores&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;words&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;total&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;frequency&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lower&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;than&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;#&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;workers&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;–&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Use&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;these&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;many&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;worker&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;threads&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;train&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;faster&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;training&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; 	&lt;span class=&quot;n&quot;&gt;multicore&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;machines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gensim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Word2Vec&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ks_tokens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;150&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;min_count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;workers&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+# Parameters
+# size (int, optional) – Dimensionality of the word vectors.
+# window (int, optional) – Maximum distance between the current and predicted word within a sentence.
+# min_count (int, optional) – Ignores all words with total frequency lower than this.
+# workers (int, optional) – Use these many worker threads to train the model (=faster training with 	multicore machines).
+model = gensim.models.Word2Vec (ks_tokens, window=10, size=150, min_count=1,workers=10)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;div style=&quot;direction: rtl; text-align: right;&quot;&gt;
@@ -184,7 +184,7 @@ print(tok.texts_to_matrix(corpus, mode='tfidf'))
 &lt;br /&gt;&lt;br /&gt;
 سنستخدم نموذج GloVe وهي خوارزمية تم تدريبها على نصوص من موسوعة وكيبيديا و متوفرة من جامعة ستانفورد على هذا &lt;a href=&quot;https://nlp.stanford.edu/data/glove.6B.zip&quot;&gt; الرابط &lt;/a&gt;. الأكواد التالية ستعمل على تحميل النموذج واستخدامه.
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
 from scipy import spatial
 
 embeddings_dict = {}
@@ -213,7 +213,7 @@ with open(&quot;models/glove.6B.50d.txt&quot;, &quot;r&quot;) as file:
 &lt;br /&gt;
 الرسم البياني في الصورة السابقة مبني على حساب فرق المسافة بين المتجهات. هناك عمليات رياضية مختلفة تُستخدم لحساب العلاقة بين المتجهات. الأكواد التالية تحسب العلاقة بين المتجهات باستخدام (Euclidean) أو (Cosine Similarity).
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Example 1 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Example 1 
 x = embeddings_dict['book']
 y = embeddings_dict['notebook']
 math.sqrt(sum([(a - b) ** 2 for a, b in zip(x, y)]))
@@ -222,7 +222,7 @@ math.sqrt(sum([(a - b) ** 2 for a, b in zip(x, y)]))
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Example 2
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Example 2
 x = embeddings_dict['book']
 y = embeddings_dict['notebook']
 spatial.distance.cosine(x,y)
@@ -251,7 +251,7 @@ spatial.distance.cosine(x,y)
 &lt;/div&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://nlp.stanford.edu/projects/glove/&quot;&gt;Global Vectors for Word Representation&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Mohammed Alhamid</name></author><summary type="html"></summary></entry><entry><title type="html">تعلم الآلة ‫-‬ أساليب أخذ العينات</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;تعلم الآلة ‫-‬ أساليب أخذ العينات&lt;/div&gt;" /><published>2020-05-09T00:00:00-04:00</published><updated>2020-05-09T00:00:00-04:00</updated><id>http://localhost:4000/data-sampling</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/119-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>Mohammed Alhamid</name></author><summary type="html"></summary></entry><entry><title type="html">تعلم الآلة ‫-‬ أساليب أخذ العينات</title><link href="http://localhost:4000/data_sampling/" rel="alternate" type="text/html" title="تعلم الآلة ‫-‬ أساليب أخذ العينات" /><published>2020-05-09T00:00:00-04:00</published><updated>2020-05-09T00:00:00-04:00</updated><id>http://localhost:4000/data-sampling</id><content type="html" xml:base="http://localhost:4000/data_sampling/">&lt;p&gt;&lt;img src=&quot;/assets/images/119-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;&lt;a href=&quot;https://unsplash.com/@impatrickt&quot;&gt;Photo by Luke Chesser on Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
@@ -313,7 +313,7 @@ spatial.distance.cosine(x,y)
 
 &lt;br /&gt;&lt;br /&gt;
 وفي الختام أريد أن أنوه أن الطرق الإحصائية تزخر بالعديد من الأساليب العلمية المتبعة لأخذ العينات بطريقة غير عشوائية كالعينات العرضية أو العينات القصدية التي تهتم بشريحة معينة من البيانات و غيرها. لا شك بأهمية هذه الأساليب بحثياً في حالات مختلفة لكن استخدامها محدود في مجال تعلم الآلة نظراً لاننا دائماً ما نبحث عن تمثيل حقيقي للبيانات من خلال أخذ عينات تتسم بالشمولية.
-&lt;/div&gt;</content><author><name>Mohammed Alhamid</name></author><summary type="html"></summary></entry><entry><title type="html">فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba</title><link href="http://localhost:4000/numpy_vs_numba/" rel="alternate" type="text/html" title="&lt;div class=&quot;col-md-6 text-right&quot;&gt;فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba&lt;/div&gt;" /><published>2020-03-27T00:00:00-04:00</published><updated>2020-03-27T00:00:00-04:00</updated><id>http://localhost:4000/ar_numpy_numba</id><content type="html" xml:base="http://localhost:4000/numpy_vs_numba/">&lt;p&gt;&lt;img src=&quot;/assets/images/113-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>Mohammed Alhamid</name></author><summary type="html"></summary></entry><entry><title type="html">فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba</title><link href="http://localhost:4000/numpy_vs_numba/" rel="alternate" type="text/html" title="فهم الاختلافات بين مكتبتي لغة بايثون NumPy و Numba" /><published>2020-03-27T00:00:00-04:00</published><updated>2020-03-27T00:00:00-04:00</updated><id>http://localhost:4000/ar_numpy_numba</id><content type="html" xml:base="http://localhost:4000/numpy_vs_numba/">&lt;p&gt;&lt;img src=&quot;/assets/images/113-icon.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;small&gt;&lt;a href=&quot;https://unsplash.com/@impatrickt&quot;&gt;Photo by Patrick Tomasso on Unsplash&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
 
@@ -327,7 +327,7 @@ NumPy و Numba هما حزمتان رائعتان متاحتان بلغة باي
 دعونا نحصل على مثال بسيط: أولاً، سننشئ متجه بسيط بلغة بايثون يحتوي على عشرة ملايين صف. سنتمكن من خلال هذا العدد الكبير ابراز الاختلافات في الأداء بسهولة.
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# We need to import the random package to fillup the array with some random values.import random
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# We need to import the random package to fillup the array with some random values.import random
 array = []
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -336,7 +336,7 @@ array = []
 أنا استخدم IPython ؛ إذا كنت تقوم بتشغيل هذه الشفرات على Jupyter Notebook ، فأوصي باستخدام الأمر &quot;السحري&quot; المدمج (time).
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
 for i in range(0,10000000):
 	val = random.randint(0,1000)
 	array.append(val)
@@ -350,7 +350,7 @@ for i in range(0,10000000):
 دعونا نبحث في هذه القائمة عن عدد الصفوف التي تحتوي على القيمة 999؟
 
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
 freq = 0 
 for value in array: 
 	if value == 999: 
@@ -362,7 +362,7 @@ for value in array:
 
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import numpy as np
 
 # We use the same list created earlier: 
 np_array = np.array(array)
@@ -374,7 +374,7 @@ print('The size of the numpy array: ', np_array.shape)
 البرمجية:
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
 result = np.where(np_array == 999)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -388,7 +388,7 @@ result = np.where(np_array == 999)
 باستخدام NumPy.
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
 def apply_operation_list(array): 
     # We need to build an X vector from the original array
     # The math operations in this function represents some random logic.
@@ -419,7 +419,7 @@ x_array, y_array, z_array = apply_operation_list(array)
 
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def apply_operation_numpy(array): 
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def apply_operation_numpy(array): 
     # We need to build an X vector from the original array
     # The math operations in this function represent some random logic.
     x_array = array * 2
@@ -445,7 +445,7 @@ x_array, y_array, z_array = apply_operation_list(array)
 
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Loading the Numba package
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Loading the Numba package
 # Jit tells numba the function we want to compile
 from numba import jit
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
@@ -454,7 +454,7 @@ from numba import jit
 لاحظ أن كل ما يتعين علينا تغييره مقارنة بالدالة السابقة التي استخدمنا فيها Numpy المحددة أعلاه.
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@jit
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@jit
 def apply_operation_numba(array): 
     # We need to build an X vector from the original array
     # The math operations in this function represents some random logic.
@@ -495,7 +495,7 @@ NumPy عبارة عن حاوية هائلة لضغط مساحة المتجه ا�
 
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
 count = {x:x_array.count(x) for x in x_array}
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -504,7 +504,7 @@ count = {x:x_array.count(x) for x in x_array}
 
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;%%time
 x_elements_np, x_counts_np = np.unique(x_array_np, return_counts=True)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
@@ -531,7 +531,7 @@ x_elements_np, x_counts_np = np.unique(x_array_np, return_counts=True)
 
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from scipy.linalg import svd
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;from scipy.linalg import svd
 # We will consider in this example only two dimensions. 
 # m x 2 
 # U: m x r 
@@ -550,7 +550,7 @@ Sigma[:2, :2] = np.diag(s)
 ضرب المصفوفات هو مثال آخر يوضح كيف يمكن أن يكون Numba مفيدة لزيادة وقت المعالجة. حتى بدون Cuda ، يمكننا تحقيق أداء أفضل. دعونا نأخذ المثال خطوة بخطوة. كما فعلنا من قبل ، سننفذ وظيفة أولاً باستخدام &quot;قائمة&quot; بايثون.
 
 &lt;/div&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def matrix_multiplication(A,B):
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def matrix_multiplication(A,B):
     row, col_A = A.shape
     col_B = B.shape[1]
     result = np.zeros((row,col_B))
@@ -565,7 +565,7 @@ Sigma[:2, :2] = np.diag(s)
 لمعالجة 10 ملايين صف، تكون &quot;القائمة&quot; سريعة جداً في معالجة ضرب المصفوفات. وقت التشغيل هو 1 دقيقة و 7 ثوان فقط. باستخدام Numpy ، استغرق الأمر 95 ثانية للقيام بنفس المهمة.
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def matrix_multiplication_numpy(A,B):
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;def matrix_multiplication_numpy(A,B):
     result = np.dot(A,B)
     return result
 
@@ -577,7 +577,7 @@ result = matrix_multiplication_numpy(array_np, array_np)
 الآن بعد استبدال Numby بـ Numba ، قمنا بتقليل عمليات الضرب المكلفة من خلال وظيفة بسيطة أدت إلى 68 ثانية فقط أي تقليل الوقت بنسبة 28٪.
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@jit
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;@jit
 def matrix_multiplication_numba(A, B, result):
     for i in range(result.shape[0]):
         for j in range(result.shape[1]):
@@ -607,20 +607,20 @@ def matrix_multiplication_numba(A, B, result):
 
 &lt;p&gt;العامل الرئيس لتنفيذ أي عملية لاستخراج النص، مثل اكتشاف الموضوع أو تحليل المشاعر، هو تحويل الكلمات إلى أرقام، وتحويل سلسلة الكلمات إلى تسلسل رقمي. بمجرد حصولنا على الأرقام، نعود إلى لعبة تحليل البيانات المعروفة، حيث يمكن أن تساعدنا خوارزميات تعلم الآلة في التصنيف والتجميع.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.nmthgiat.com/ترميز-النصوص-مراجعة/&quot;&gt;لتكملة المقال الضغط على هذا الرابط.&lt;/a&gt;&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="تعلم-الآلة" /><category term="الترميز-في-تعلم-الآلة" /><summary type="html"></summary></entry><entry><title type="html">الكتب، الدورات، وقواعد البيانات التي يجب على كل عالم بيانات معرفتها</title><link href="http://localhost:4000/ar_posts/ar_ml_resources/" rel="alternate" type="text/html" title="الكتب، الدورات، وقواعد البيانات التي يجب على كل عالم بيانات معرفتها" /><published>2019-12-07T00:00:00-05:00</published><updated>2019-12-07T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_ml_resources</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_ml_resources/">&lt;p&gt;&lt;img src=&quot;https://i0.wp.com/miro.medium.com/max/1514/1*kzdg0w1TOhqAoxpLoWFVNA.png?zoom=2&amp;amp;resize=708%2C396&amp;amp;ssl=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.nmthgiat.com/ترميز-النصوص-مراجعة/&quot;&gt;لتكملة المقال الضغط على هذا الرابط.&lt;/a&gt;&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="ar_posts" /><category term="تعلم-الآلة" /><category term="الترميز-في-تعلم-الآلة" /><summary type="html"></summary></entry><entry><title type="html">الكتب، الدورات، وقواعد البيانات التي يجب على كل عالم بيانات معرفتها</title><link href="http://localhost:4000/ar_posts/ar_ml_resources/" rel="alternate" type="text/html" title="الكتب، الدورات، وقواعد البيانات التي يجب على كل عالم بيانات معرفتها" /><published>2019-12-07T00:00:00-05:00</published><updated>2019-12-07T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_ml_resources</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_ml_resources/">&lt;p&gt;&lt;img src=&quot;https://i0.wp.com/miro.medium.com/max/1514/1*kzdg0w1TOhqAoxpLoWFVNA.png?zoom=2&amp;amp;resize=708%2C396&amp;amp;ssl=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;نشر في موقع نمذجيات - ٧ ديسمبر 2019م&lt;/p&gt;
 
 &lt;p&gt;بادئ ذي بدء، أنت على الطريق الصحيح. يعد العمل على تعلم الآلة (Machine Learning) من أجل بناء معرفتك في مجال الذكاء الاصطناعي خياراً مميزاً. تحرز تقنيات الذكاء الاصطناعي تقدماً هائلاً ليس فقط في تطوير البرمجيات بل كل جانب من جوانب حياتنا 
 اليومية.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.nmthgiat.com/الكتب،-الدورات،-وقواعد-البيانات-التي/&quot;&gt;لتكملة المقال الضغط على هذا الرابط.&lt;/a&gt;&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="كتب-في-تعلم-الآلة" /><category term="مراجع-في-تعلم-الآلة" /><summary type="html"></summary></entry><entry><title type="html">أهم عشرة أخطاء إحصائية يرتكبها علماء البيانات</title><link href="http://localhost:4000/ar_posts/ar_ml_mistakes/" rel="alternate" type="text/html" title="أهم عشرة أخطاء إحصائية يرتكبها علماء البيانات" /><published>2019-12-07T00:00:00-05:00</published><updated>2019-12-07T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_ml_mistakes</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_ml_mistakes/">&lt;p&gt;&lt;img src=&quot;https://i0.wp.com/www.nmthgiat.com/wp-content/uploads/2020/02/mitsakes.jpg?zoom=2&amp;amp;resize=768%2C295&amp;amp;ssl=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.nmthgiat.com/الكتب،-الدورات،-وقواعد-البيانات-التي/&quot;&gt;لتكملة المقال الضغط على هذا الرابط.&lt;/a&gt;&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="ar_posts" /><category term="كتب-في-تعلم-الآلة" /><category term="مراجع-في-تعلم-الآلة" /><summary type="html"></summary></entry><entry><title type="html">أهم عشرة أخطاء إحصائية يرتكبها علماء البيانات</title><link href="http://localhost:4000/ar_posts/ar_ml_mistakes/" rel="alternate" type="text/html" title="أهم عشرة أخطاء إحصائية يرتكبها علماء البيانات" /><published>2019-12-07T00:00:00-05:00</published><updated>2019-12-07T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_ml_mistakes</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_ml_mistakes/">&lt;p&gt;&lt;img src=&quot;https://i0.wp.com/www.nmthgiat.com/wp-content/uploads/2020/02/mitsakes.jpg?zoom=2&amp;amp;resize=768%2C295&amp;amp;ssl=1&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;نشر في موقع نمذجيات - ١ فبراير ٢٠٢٠ م&lt;/p&gt;
 
 &lt;p&gt;عالم البيانات هو “شخص أفضل في الإحصاء من أي مهندس برمجيات وأفضل في هندسة البرمجيات من أي إحصائي”. في مقالة سابقة: أهم عشرة أخطاء برمجية قام بها علماء البيانات، ناقشنا كيف يمكن للإحصائيين أن يصبحوا مُبرمجين بشكل أفضل. نناقش هنا كيف يمكن للمبرمجين أن يكونوا إحصائيين بشكل أفضل.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.nmthgiat.com/أهم-عشرة-أخطاء-إحصائية-يرتكبها-علماء-ا/&quot;&gt;لتكملة المقال الضغط على هذا الرابط.&lt;/a&gt;&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="تعلم-الآلة" /><category term="أخطاء-في-تعلم-الآلة" /><summary type="html"></summary></entry><entry><title type="html">القوة الدافعة للاستثمار في المعلوماتية</title><link href="http://localhost:4000/ar_posts/ar_techinvest/" rel="alternate" type="text/html" title="القوة الدافعة للاستثمار في المعلوماتية" /><published>2016-12-21T00:00:00-05:00</published><updated>2016-12-21T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_techinvest</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_techinvest/">&lt;figure class=&quot;image&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.nmthgiat.com/أهم-عشرة-أخطاء-إحصائية-يرتكبها-علماء-ا/&quot;&gt;لتكملة المقال الضغط على هذا الرابط.&lt;/a&gt;&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="ar_posts" /><category term="تعلم-الآلة" /><category term="أخطاء-في-تعلم-الآلة" /><summary type="html"></summary></entry><entry><title type="html">القوة الدافعة للاستثمار في المعلوماتية</title><link href="http://localhost:4000/ar_posts/ar_techinvest/" rel="alternate" type="text/html" title="القوة الدافعة للاستثمار في المعلوماتية" /><published>2016-12-21T00:00:00-05:00</published><updated>2016-12-21T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_techinvest</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_techinvest/">&lt;figure class=&quot;image&quot;&gt;
     &lt;a href=&quot;/assets/images//assets/images/invest-icon.jpg&quot;&gt;&lt;img src=&quot;/assets/images/invest-icon.jpg&quot; /&gt;&lt;/a&gt;
     
 
@@ -639,7 +639,7 @@ def matrix_multiplication_numba(A, B, result):
 
 &lt;p&gt;إن الرسم المذكور للوضع ليس من منظور اقتصادي بل من منظور صناعي للتقنية. تستطيع شركات التقنية دعم الاقتصاد الأميركي بإيرادات ضخمة في حال صعود أسعار النفط لأنها تزيد من قدرتنا الشرائية كمستهلكين. لذلك هذا الجهاز المحمول الصغير له تأثير اقتصادي فضلاً عن التأثير الثقافي لما يحتويه من منصات تجارية وثقافية عبر البرامج التي يحملها.&lt;/p&gt;
 
-&lt;p&gt;إن مستقبل أعمالنا واقتصادنا لابد أن يدور حول عالم الإنترنت الذي غير نمط الأعمال والإنتاج والاستهلاك حتى الوصول إلى الحكومة الرقمية والأعمال الإلكترونية. إن التقنية التي نملكها اليوم تمهد لنا مستقبلاً مليئاً بالروبوتات الذكية والطباعة ثلاثية الأبعاد وصولاً للسيارات ذاتية القيادة. لذلك، لنتصور ولو للحظة كم سنتكلف من مدخراتنا الخاصة في سبيل حصولنا على ذلك الجهاز الخليوي في المستقبل.&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="الاستثمار-في-المعلوماتية" /><category term="الاستثمار-في-البيانات" /><summary type="html"></summary></entry><entry><title type="html">رؤية المملكة والاستثمار في البيانات</title><link href="http://localhost:4000/ar_posts/ar_techvision/" rel="alternate" type="text/html" title="رؤية المملكة والاستثمار في البيانات" /><published>2016-06-18T00:00:00-04:00</published><updated>2016-06-18T00:00:00-04:00</updated><id>http://localhost:4000/ar_posts/ar_techvision</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_techvision/">&lt;figure class=&quot;image&quot;&gt;
+&lt;p&gt;إن مستقبل أعمالنا واقتصادنا لابد أن يدور حول عالم الإنترنت الذي غير نمط الأعمال والإنتاج والاستهلاك حتى الوصول إلى الحكومة الرقمية والأعمال الإلكترونية. إن التقنية التي نملكها اليوم تمهد لنا مستقبلاً مليئاً بالروبوتات الذكية والطباعة ثلاثية الأبعاد وصولاً للسيارات ذاتية القيادة. لذلك، لنتصور ولو للحظة كم سنتكلف من مدخراتنا الخاصة في سبيل حصولنا على ذلك الجهاز الخليوي في المستقبل.&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="ar_posts" /><category term="الاستثمار-في-المعلوماتية" /><category term="الاستثمار-في-البيانات" /><summary type="html"></summary></entry><entry><title type="html">رؤية المملكة والاستثمار في البيانات</title><link href="http://localhost:4000/ar_posts/ar_techvision/" rel="alternate" type="text/html" title="رؤية المملكة والاستثمار في البيانات" /><published>2016-06-18T00:00:00-04:00</published><updated>2016-06-18T00:00:00-04:00</updated><id>http://localhost:4000/ar_posts/ar_techvision</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_techvision/">&lt;figure class=&quot;image&quot;&gt;
     &lt;a href=&quot;/assets/images//assets/images/invest-tech-icon.jpg&quot;&gt;&lt;img src=&quot;/assets/images/invest-tech-icon.jpg&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;small&gt;Photo by NASA on Unsplash&lt;/small&gt;&lt;/p&gt;
@@ -660,7 +660,7 @@ def matrix_multiplication_numba(A, B, result):
 
 &lt;p&gt;إن رؤية المملكة 2030 التي شملت في أكثر من نص على أهمية توسيع نطاق الخدمات الإلكترونية، شددت في نفس تلك النصوص على أهمية استحداث منصات للبيانات ذات صفة مشاركة لتعزيز حوكمة العمل الحكومي بما يضمن استيعاباً أكبر عند اتخاذ القرارات.&lt;/p&gt;
 
-&lt;p&gt;أستاذ هندسة برمجيات&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="رؤية-المملكة" /><category term="الاستثمار-في-البيانات" /><summary type="html"></summary></entry><entry><title type="html">الأوراق المالية الإلكترونية</title><link href="http://localhost:4000/ar_posts/ar_emoney/" rel="alternate" type="text/html" title="الأوراق المالية الإلكترونية" /><published>2016-02-01T00:00:00-05:00</published><updated>2016-02-01T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_emoney</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_emoney/">&lt;figure class=&quot;image&quot;&gt;
+&lt;p&gt;أستاذ هندسة برمجيات&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="ar_posts" /><category term="رؤية-المملكة" /><category term="الاستثمار-في-البيانات" /><summary type="html"></summary></entry><entry><title type="html">الأوراق المالية الإلكترونية</title><link href="http://localhost:4000/ar_posts/ar_emoney/" rel="alternate" type="text/html" title="الأوراق المالية الإلكترونية" /><published>2016-02-01T00:00:00-05:00</published><updated>2016-02-01T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_emoney</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_emoney/">&lt;figure class=&quot;image&quot;&gt;
     &lt;a href=&quot;/assets/images//assets/images/100-icon.jpg&quot;&gt;&lt;img src=&quot;/assets/images/100-icon.jpg&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;small&gt;Photo by Austin Distel on Unsplash.&lt;/small&gt;&lt;/p&gt;
@@ -677,7 +677,7 @@ def matrix_multiplication_numba(A, B, result):
 
 &lt;p&gt;بعيداً عن الاقتصاديين، يرى خبراء التقنية في الهواتف المحمولة وسيلة التعامل المالي في المستقبل عبر تمرير الهواتف على أجهزة استشعار كهرومغناطيسية يمكن استخدامها في سداد العمليات المالية ذات القيمة البسيطة مع الإبقاء على البطاقات البنكية في العمليات ذات القيمة المالية المرتفعة. مما قد يعني لنا بأن بعض شركات الاتصالات قد تتحول تدريجياً إلى بناء شراكات يمكنها من لعب دور المصارف المالية لتداول الأموال الإلكترونية. ففي كندا اليوم - على سبيل المثال – غالبية البنوك المالية تسمح لعملائها بعمل حوالة مالية باستخدام البريد الإلكتروني للمستفيد فقط وهي تجربة ساهمت بشكل كبير في دعم التجارة الإلكترونية وإضافة المزيد من التسهيلات للعاملين من منازلهم.&lt;/p&gt;
 
-&lt;p&gt;*أستاذ هندسة البرمجيات المساعد بجامعة الملك سعود&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="الأوراق-المالية" /><category term="العملة-الرقمية" /><summary type="html"></summary></entry><entry><title type="html">التحول لاقتصاد المعرفة</title><link href="http://localhost:4000/ar_posts/ar_ecoknow/" rel="alternate" type="text/html" title="التحول لاقتصاد المعرفة" /><published>2016-01-16T00:00:00-05:00</published><updated>2016-01-16T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_ecoknow</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_ecoknow/">&lt;figure class=&quot;image&quot;&gt;
+&lt;p&gt;*أستاذ هندسة البرمجيات المساعد بجامعة الملك سعود&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="ar_posts" /><category term="الأوراق-المالية" /><category term="العملة-الرقمية" /><summary type="html"></summary></entry><entry><title type="html">التحول لاقتصاد المعرفة</title><link href="http://localhost:4000/ar_posts/ar_ecoknow/" rel="alternate" type="text/html" title="التحول لاقتصاد المعرفة" /><published>2016-01-16T00:00:00-05:00</published><updated>2016-01-16T00:00:00-05:00</updated><id>http://localhost:4000/ar_posts/ar_ecoknow</id><content type="html" xml:base="http://localhost:4000/ar_posts/ar_ecoknow/">&lt;figure class=&quot;image&quot;&gt;
     &lt;a href=&quot;/assets/images//assets/images/101-icon.jpg&quot;&gt;&lt;img src=&quot;/assets/images/101-icon.jpg&quot; /&gt;&lt;/a&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;small&gt;Photo by Austin Distel on Unsplash.&lt;/small&gt;&lt;/p&gt;
@@ -693,4 +693,4 @@ def matrix_multiplication_numba(A, B, result):
 &lt;p&gt;إدراكاً لما سبق فقد عمدت المملكة مؤخراً وبشكل متسارع إلى تقديم تسهيلات للشركات الأجنبية لتصنيع منتجاتها داخل المملكة نقلاً للتقنية وخلقاً لمزيد من الفرص للشباب السعودي. كما دعمت قطاع المال بمدينة الملك عبدالله المالية وبناء مجتمع متطور ومبتكر متمثلاً في مشروع مجمع تقنية المعلومات والاتصالات، ويُعول على رجال الأعمال المزيد من الالتفات الجاد للاستثمار في المعلوماتية وصناعة التقنية لبناء شركات تساهم في بناء البنية الرقمية للمملكة والتكيف مع فرص الاستثمار الجديدة؛ وأخص بالذكر استنساخ تجربة وادي السيليكون بالولايات المتحدة في دعم الشركات الناشئة على شبكة الإنترنت والشركات الصغيرة ذات الحلول التقنية المبتكرة.&lt;/p&gt;
 
 &lt;p&gt;أستاذ هندسة البرمجيات المساعد
-بجامعة الملك سعود&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="اقتصاد-المعرفة" /><category term="التحول-الرقمي" /><summary type="html"></summary></entry></feed>
+بجامعة الملك سعود&lt;/p&gt;</content><author><name>Mohammed Alhamid</name></author><category term="ar_posts" /><category term="اقتصاد-المعرفة" /><category term="التحول-الرقمي" /><summary type="html"></summary></entry></feed>
