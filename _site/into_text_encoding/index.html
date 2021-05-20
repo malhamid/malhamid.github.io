@@ -274,7 +274,7 @@
 التقنيات المستخدمة اليوم لترميز النصوص ليست بالمعقدة إطلاقاً وسنستعرض سوية مجموعة منها مع الأمثلة باستخدام لغة بايثون، بالتفصيل. سنستخدم في هذا الشرح مجموعة من النصوص استخرجت من موسوعة ويكيبيديا تتكلم عن عدد الأشجار الموجودة حول العالم.
 <br /><br />
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>corpus = [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>corpus = [
 	"The number of trees in the world, according to a 2015 estimate, is 3.04 trillion.",
 	"46% of the trees in the world are in the tropics or sub-tropics.",
 	"20% of the trees in the world are in the temperate zones.",
@@ -298,7 +298,7 @@
 يمكن استخراج الكلمات باستخدام الأكواد المذيلة بالأسفل مع العلم أن مكتبة (Keras) تقدم واجهات (API) تقوم بهذه 
 العملية.
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Extracting the tokens using NLTK
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Extracting the tokens using NLTK
 # We need to serialize the text to splits the works into tokens
 nltk_tokens = [] 
 for text in corpus:
@@ -309,7 +309,7 @@ print(nltk_tokens)
 <div style="direction: rtl; text-align: right;">
 وهنا باستخدام المكتبة: 
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Extracting the tokens using Keras
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Extracting the tokens using Keras
 ks_tokens = []
 for text in corpus: 
     ks_tokens.append(keras_text_to_word_sequence(text))
@@ -324,7 +324,7 @@ print(ks_tokens)
 تهيئة الكلمات تشمل الخطوات التي ذكرناها سابقاً والتي تشمل إزالة المستبعدات و استعادة جذور الكلمات و إزالة علامات الترقيم و الأحرف الخاصة و الرموز المكونة من حرف واحد. 
 بالامكان تحميل الكلمات المستبعدة في اللغة الانجليزية من المكتبة الأكثر شيوعاً في معالجة اللغة الطبيعية (nltk) على النحو التالي:
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from nltk.corpus import stopwords
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from nltk.corpus import stopwords
 # Retriving the stop words from the library 
 stop_words = set(stopwords.words('english'))
 
@@ -338,7 +338,7 @@ for i in range(0, len(ks_tokens)):
 <br />
 يتطلب علينا الآن استعادة جذور الكلمات و سننفذ هذه الخطوة على النصوص الانجليزية باستخدام خوارزمية (Porter) على النحو التالي: 
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># We will use Porter algorithm to reduce the words. Porter has 5 phases of word reductions: 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># We will use Porter algorithm to reduce the words. Porter has 5 phases of word reductions: 
 from nltk.stem.porter import PorterStemmer
 porter = PorterStemmer()
 </code></pre></div></div>
@@ -348,7 +348,7 @@ porter = PorterStemmer()
 علينا الآن المرور على الكلمات المستخرجة و استعادة جذورها: 
 </div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for tokens in ks_tokens:
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for tokens in ks_tokens:
     for i in range(0, len(tokens)):    
         tokens[i] = porter.stem(tokens[i])
 </code></pre></div></div>
@@ -360,7 +360,7 @@ porter = PorterStemmer()
 <br />
 الأكواد التالية ستعمل على إزالة الأرقام و علامات الترقيم و الأحرف الخاصة كما تقدم: 
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i in range(0, len(ks_tokens)):
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>for i in range(0, len(ks_tokens)):
     new_ks_tokens = []
     for tok in ks_tokens[i]: 
         tok = tok.translate(str.maketrans('', '', string.punctuation))
@@ -376,7 +376,7 @@ porter = PorterStemmer()
 
 تحتوي الخطوات السابقة على العديد من الحلقات المتكررة ويمكن بسهولة أن تكون مكلفة للغاية خصوصاً إذا زاد عدد الكلمات بشكل كبير. وبالتالي ، سوف نكرر الخطوات السابقة باستخدام أسطر قليلة من التعليمات البرمجية باستخدام مكتبة (Keras):
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from keras.preprocessing.text import Tokenizer
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>from keras.preprocessing.text import Tokenizer
 # First step is to get an instance of the tokenizer class
 tok = Tokenizer()
 # Keras can fit our corpus in a single call
@@ -385,7 +385,7 @@ tok.fit_on_texts(corpus)
 <div style="direction: rtl; text-align: right;">
 بالامكان الآن استطلاع تردد كل كلمة في المتجهات و عدد تكرارها في كل جملة على النحو التالي: 
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Let's explore what is the content of the tokenized corpus
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Let's explore what is the content of the tokenized corpus
 print('The frequency of each word in the corpus:')
 print(tok.word_counts)
 </code></pre></div></div>
@@ -396,7 +396,7 @@ print(tok.word_counts)
 <h3>الترميز الساخن </h3>
 يقصد بالترميز الساخن بناء متجهات تحمل جميع المفردات الموجودة في القاموس النصي المدخل ويكون حجم المتجه مساو لعدد الكلمات المستخرجة. يحتوي عناصر كل متجه على قيم تساوي الصفر أو الواحد. عدد المتجهات يساوي عدد الجمل النصية المدخلة. سمي بالساخن نظراً أنه يشغل العناصر التي تظهر في الجملة بقيمة ١ عند ظهور الكلمة كما في المثال التالي:
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(tok.texts_to_matrix(corpus, mode='binary'))
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>print(tok.texts_to_matrix(corpus, mode='binary'))
 </code></pre></div></div>
 
 <p><img src="/assets/images/132-icon.png" alt="" /></p>
@@ -407,7 +407,7 @@ print(tok.word_counts)
 <h3> الترميز العددي </h3>
 هذا النوع من الترميز مشابه لسابقه إلا أنه عوضاً عن استخدام القيمة ١، نستخدم تردد الكلمة في نفس الجملة.
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Encoding the frequency of each word in the sentence
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Encoding the frequency of each word in the sentence
 print(tok.texts_to_matrix(corpus, mode='count'))
 </code></pre></div></div>
 
@@ -415,7 +415,7 @@ print(tok.texts_to_matrix(corpus, mode='count'))
 <div style="direction: rtl; text-align: right;">
 يستخدم لوصف هذا النوع من الترميز مصطلح ([Frequency-based vectorization) وهناك طرق مشابهة للترميز العددي أو الترددي أشهرها (TF‪-‬IDF). ويمكن حساب الترميز بهذه الطريقة بناء على عدد الظهور لكلمة معينة على اجمالي عدد الكلمات في المستند. 
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Encoding the frequency of each word in the sentence (TFIDF)
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Encoding the frequency of each word in the sentence (TFIDF)
 print(tok.texts_to_matrix(corpus, mode='tfidf'))
 </code></pre></div></div>
 
@@ -427,19 +427,19 @@ print(tok.texts_to_matrix(corpus, mode='tfidf'))
 <br /><br />
 يوجد نموذجان واسعا الانتشار الأول Word2Vec و الآخر GloVe. لبناء نموذج محاكي لطريقة بناء متجهات Word2Vec نحتاج المكتبات التالية للتسهيل:
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">import</span> <span class="n">gensim</span> 
-<span class="k">from</span> <span class="n">gensim</span><span class="p">.</span><span class="n">models</span> <span class="n">import</span> <span class="n">Word2Vec</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import gensim 
+from gensim.models import Word2Vec
 
-<span class="p">#</span> <span class="n">Building</span> <span class="n">a</span> <span class="n">word2vec</span> <span class="k">model</span> <span class="n">typically</span> <span class="n">is</span> <span class="n">very</span> <span class="n">expensive</span><span class="p">,</span> <span class="n">so</span> <span class="n">we</span> <span class="n">need</span> <span class="k">to</span> <span class="n">keep</span> <span class="k">in</span> <span class="n">mind</span> <span class="n">the</span> <span class="n">multiprocessing</span> 
-<span class="p">#</span> <span class="n">approach</span> <span class="n">option</span>
-<span class="n">import</span> <span class="n">multiprocessing</span> <span class="n">cores</span> <span class="p">=</span> <span class="n">multiprocessing</span><span class="p">.</span><span class="n">cpu_count</span><span class="p">()</span>
+# Building a word2vec model typically is very expensive, so we need to keep in mind the multiprocessing 
+# approach option
+import multiprocessing cores = multiprocessing.cpu_count()
 
-<span class="p">#</span> <span class="k">Parameters</span>
-<span class="p">#</span> <span class="n">size</span> <span class="p">(</span><span class="n">int</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span> <span class="err">–</span> <span class="n">Dimensionality</span> <span class="k">of</span> <span class="n">the</span> <span class="n">word</span> <span class="n">vectors</span><span class="p">.</span>
-<span class="p">#</span> <span class="n">window</span> <span class="p">(</span><span class="n">int</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span> <span class="err">–</span> <span class="n">Maximum</span> <span class="n">distance</span> <span class="n">between</span> <span class="n">the</span> <span class="n">current</span> <span class="k">and</span> <span class="n">predicted</span> <span class="n">word</span> <span class="n">within</span> <span class="n">a</span> <span class="n">sentence</span><span class="p">.</span>
-<span class="p">#</span> <span class="n">min_count</span> <span class="p">(</span><span class="n">int</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span> <span class="err">–</span> <span class="n">Ignores</span> <span class="n">all</span> <span class="n">words</span> <span class="k">with</span> <span class="n">total</span> <span class="n">frequency</span> <span class="n">lower</span> <span class="n">than</span> <span class="n">this</span><span class="p">.</span>
-<span class="p">#</span> <span class="n">workers</span> <span class="p">(</span><span class="n">int</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span> <span class="err">–</span> <span class="n">Use</span> <span class="n">these</span> <span class="n">many</span> <span class="n">worker</span> <span class="n">threads</span> <span class="k">to</span> <span class="n">train</span> <span class="n">the</span> <span class="k">model</span> <span class="p">(=</span><span class="n">faster</span> <span class="n">training</span> <span class="k">with</span> 	<span class="n">multicore</span> <span class="n">machines</span><span class="p">).</span>
-<span class="k">model</span> <span class="p">=</span> <span class="n">gensim</span><span class="p">.</span><span class="n">models</span><span class="p">.</span><span class="n">Word2Vec</span> <span class="p">(</span><span class="n">ks_tokens</span><span class="p">,</span> <span class="n">window</span><span class="p">=</span><span class="m">10</span><span class="p">,</span> <span class="n">size</span><span class="p">=</span><span class="m">150</span><span class="p">,</span> <span class="n">min_count</span><span class="p">=</span><span class="m">1</span><span class="p">,</span><span class="n">workers</span><span class="p">=</span><span class="m">10</span><span class="p">)</span>
+# Parameters
+# size (int, optional) – Dimensionality of the word vectors.
+# window (int, optional) – Maximum distance between the current and predicted word within a sentence.
+# min_count (int, optional) – Ignores all words with total frequency lower than this.
+# workers (int, optional) – Use these many worker threads to train the model (=faster training with 	multicore machines).
+model = gensim.models.Word2Vec (ks_tokens, window=10, size=150, min_count=1,workers=10)
 </code></pre></div></div>
 
 <div style="direction: rtl; text-align: right;">
@@ -450,7 +450,7 @@ print(tok.texts_to_matrix(corpus, mode='tfidf'))
 <br /><br />
 سنستخدم نموذج GloVe وهي خوارزمية تم تدريبها على نصوص من موسوعة وكيبيديا و متوفرة من جامعة ستانفورد على هذا <a href="https://nlp.stanford.edu/data/glove.6B.zip"> الرابط </a>. الأكواد التالية ستعمل على تحميل النموذج واستخدامه.
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import numpy as np
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import numpy as np
 from scipy import spatial
 
 embeddings_dict = {}
@@ -479,7 +479,7 @@ with open("models/glove.6B.50d.txt", "r") as file:
 <br />
 الرسم البياني في الصورة السابقة مبني على حساب فرق المسافة بين المتجهات. هناك عمليات رياضية مختلفة تُستخدم لحساب العلاقة بين المتجهات. الأكواد التالية تحسب العلاقة بين المتجهات باستخدام (Euclidean) أو (Cosine Similarity).
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Example 1 
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Example 1 
 x = embeddings_dict['book']
 y = embeddings_dict['notebook']
 math.sqrt(sum([(a - b) ** 2 for a, b in zip(x, y)]))
@@ -488,7 +488,7 @@ math.sqrt(sum([(a - b) ** 2 for a, b in zip(x, y)]))
 </code></pre></div></div>
 <div>
 </div>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Example 2
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Example 2
 x = embeddings_dict['book']
 y = embeddings_dict['notebook']
 spatial.distance.cosine(x,y)
